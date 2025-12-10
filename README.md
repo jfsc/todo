@@ -1,6 +1,6 @@
 Instruções rápidas para rodar:
 
-Descompacte o ZIP.
+Descompacte o ZIP
 
 Build: mvn clean package
 
