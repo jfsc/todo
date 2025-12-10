@@ -21,3 +21,4 @@ Estou comentando na branch develop (Larry)
 jonnattanfarias@gmail.com está comitando na develop
 brunacsnn@gmail.com está comitando na develop
 samuel.marcos.smh@gmail.com está comitando na develop
+cauanynunes00@gmail.com está comitando na develop
