@@ -15,4 +15,6 @@ cauanynunes00@gmail.com
 gabrielseixas1@gmail.com [ESTOU COMMITANDO NA BRANCH:feature_gabrielbegodex] e agora na develop
 hbezerradev@gmail.com
 
-Estou comentando na branch develop (Hugo)
+
+jonnattanfarias@gmail.com está comitando na develop
+brunacsnn@gmail.com está comitando na develop
