@@ -21,3 +21,5 @@ Estou comentando na branch develop (Aldo)
 
 jonnattanfarias@gmail.com está comitando na develop
 brunacsnn@gmail.com está comitando na develop
+
+cauanynunes00@gmail.com commitando na branch feature_cauany
