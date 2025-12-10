@@ -12,4 +12,5 @@ Email de giordanni: giordanniformiga103@gmail.com
 cauanynunes00@gmail.com
 hbezerradev@gmail.com
 
-Estou comentando na branch develop (Hugo)
+
+jonnattanfarias@gmail.com está comitando na develop
