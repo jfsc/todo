@@ -13,5 +13,7 @@ gabrielseixas1@gmail.com [ESTOU COMMITANDO NA BRANCH:feature_gabrielbegodex] e a
 hbezerradev@gmail.com
 larry_diego@hotmail.com
 
+Estou comentando na branch feature_larry (Larry)
+
 jonnattanfarias@gmail.com está comitando na develop
 brunacsnn@gmail.com está comitando na develop
