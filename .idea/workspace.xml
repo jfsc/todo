@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f543885b-60b2-47e4-940d-451573d6fed3" name="Changes" comment="" />
+    <list default="true" id="f543885b-60b2-47e4-940d-451573d6fed3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +30,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature__gabrielbegodex",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/2413080064/Documents/GitHub/todo",
     "node.js.detected.package.eslint": "true",
@@ -53,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765394764030</updated>
-      <workItem from="1765394793988" duration="846000" />
+      <workItem from="1765394793988" duration="1409000" />
     </task>
     <servers />
   </component>
