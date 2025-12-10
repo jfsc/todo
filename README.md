@@ -9,3 +9,4 @@ Build: mvn clean package
 Run: mvn spring-boot:run ou java -jar target/todo-openapi-spring3-1.0.0-SNAPSHOT.jar
 
 cauanynunes00@gmail.com
+gabrielseixas1@gmail.com
