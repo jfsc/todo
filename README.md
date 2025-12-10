@@ -13,3 +13,4 @@ cauanynunes00@gmail.com
 hbezerradev@gmail.com
 
 
+jonnattanfarias@gmail.com está comitando na develop
