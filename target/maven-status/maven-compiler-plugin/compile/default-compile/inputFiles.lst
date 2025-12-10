@@ -1,9 +1,0 @@
-C:\Users\2413080064\Documents\GitHub\todo\src\main\java\com\example\todo\config\TomlEnvironmentPostProcessor.java
-C:\Users\2413080064\Documents\GitHub\todo\src\main\java\com\example\todo\controller\TodoController.java
-C:\Users\2413080064\Documents\GitHub\todo\src\main\java\com\example\todo\domain\Todo.java
-C:\Users\2413080064\Documents\GitHub\todo\src\main\java\com\example\todo\dto\TodoRequest.java
-C:\Users\2413080064\Documents\GitHub\todo\src\main\java\com\example\todo\dto\TodoResponse.java
-C:\Users\2413080064\Documents\GitHub\todo\src\main\java\com\example\todo\exception\GlobalExceptionHandler.java
-C:\Users\2413080064\Documents\GitHub\todo\src\main\java\com\example\todo\repository\InMemoryTodoRepository.java
-C:\Users\2413080064\Documents\GitHub\todo\src\main\java\com\example\todo\TodoApplication.java
-C:\Users\2413080064\Documents\GitHub\todo\src\main\java\com\example\todo\usecase\TodoService.java
