@@ -18,3 +18,4 @@ hbezerradev@gmail.com
 
 jonnattanfarias@gmail.com está comitando na develop
 brunacsnn@gmail.com está comitando na develop
+fernandofrancafilho8@gmail.com
