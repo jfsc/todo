@@ -12,7 +12,7 @@ Run: mvn spring-boot:run ou java -jar target/todo-openapi-spring3-1.0.0-SNAPSHOT
 jonnattanfarias@gmail.com
 Email de giordanni: giordanniformiga103@gmail.com
 cauanynunes00@gmail.com
-gabrielseixas1@gmail.com [ESTOU COMMITANDO NA BRANCH:feature_gabrielbegodex] 
+gabrielseixas1@gmail.com [ESTOU COMMITANDO NA BRANCH:feature_gabrielbegodex] e agora na develop
 hbezerradev@gmail.com
 
 Estou comentando na branch develop (Hugo)
