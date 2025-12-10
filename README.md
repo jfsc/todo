@@ -10,7 +10,7 @@ aldocandeia000@gmail.com
 jonnattanfarias@gmail.com
 Email de giordanni: giordanniformiga103@gmail.com
 cauanynunes00@gmail.com
-gabrielseixas1@gmail.com [ESTOU COMMITANDO NA BRANCH:feature_gabrielbegodex] e agora na develop
+gabrielseixas1@gmail.com [ESTOU COMMITANDO NA BRANCH:devlopment]
 hbezerradev@gmail.com
 larry_diego@hotmail.com
 
