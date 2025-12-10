@@ -16,7 +16,7 @@ Email de giordanni: giordanniformiga103@gmail.com
 
 cauanynunes00@gmail.com
 
-gabrielseixas1@gmail.com [ESTOU COMMITANDO NA BRANCH:feature_gabrielbegodex] e agora na develop
+gabrielseixas1@gmail.com [ESTOU COMMITANDO NA BRANCH:devlopment]
 
 hbezerradev@gmail.com
 
@@ -29,3 +29,5 @@ Estou comentando na branch develop (Aldo)
 jonnattanfarias@gmail.com está comitando na develop
 
 brunacsnn@gmail.com está comitando na develop
+
+samuel.marcos.smh@gmail.com está comitando na develop
