@@ -25,6 +25,7 @@ larry_diego@hotmail.com
 Estou comentando na branch develop (Hugo)
 
 Estou comentando na branch develop (Aldo)
+Estou comentando na branch develop (Larry)
 
 jonnattanfarias@gmail.com está comitando na develop
 
