@@ -30,10 +30,13 @@ class InMemoryTodoRepositoryTest {
     }
 
 
-//    @Test
-//    void shouldListTodos() {
-//
-//
+    @Test
+    void shouldListTodos() {
+
+
+    }
+
+
 //    @Test
 //    void shouldUpdateTodo() {
 //
