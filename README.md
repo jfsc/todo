@@ -3,7 +3,7 @@
 A minimal **Todo API** built with **Java 17**, **Spring Boot 3**, **OpenAPI 2.0**, **TOML config loader**, and structured under **Clean Architecture**.
 
 ---
-## 📁 Project Structure – Clean Architecture
+## 📁 Project Structure
 
 ```
 src/
