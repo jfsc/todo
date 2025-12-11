@@ -12,3 +12,5 @@ e-mail: hbezerradev@gmail.com
 cauanynunes00@gmail.com
 
 // Estou comitando na minha branch (feature_hugo)
+
+VERSÃO 2.0.0 (Dia 2 11/12/2025)
