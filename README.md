@@ -130,3 +130,5 @@ cauanynunes00@gmail.com está comitando na develop
 viniciusleal952@gmail.com esta comintando na davelop
 
 leonardoag1506@gmail.com está comitando na develop
+
+Eu fernandofrancafilho8@gmail.com estou commitando na branch feature_fernando_v2
