@@ -45,18 +45,84 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.TodoApplication.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldListTodos.executor": "Run",
+    "Maven.todo-openapi-spring3 [site].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "feature__vinicius",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Vinicius Leal/Documents/FACULDADE/ACCENTURE - 2025/3º FASE/projeto_10_12/todo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn site" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.InMemoryTodoRepositoryTest">
+    <configuration name="InMemoryTodoRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryTodoRepositoryTest.shouldListTodos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldListTodos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.todo.TodoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldListTodos" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,8 +131,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765410829477</updated>
+      <workItem from="1765482002323" duration="1694000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
