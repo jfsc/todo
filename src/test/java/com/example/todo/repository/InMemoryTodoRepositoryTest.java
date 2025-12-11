@@ -29,6 +29,14 @@ class InMemoryTodoRepositoryTest {
         assertEquals("Test", found.get().getTitle());
     }
 
+    @Test
+    void shouldCreateTodoNull() {
+        Todo todoNull = new Todo(null, null, null, false);
+        repository.save(todoNull);
+        Optional<Todo> found = repository.findById(todoNull.getId());
+        assertTrue(found.isPresent());
+
+    }
 
     @Test
     void shouldListTodos() {
@@ -47,6 +55,20 @@ class InMemoryTodoRepositoryTest {
         assertTrue(todos.contains(todo1));
         assertTrue(todos.contains(todo2));
         assertTrue(todos.contains(todo3));
+
+    }
+
+
+    @Test
+    void shoulFindTodoById() {
+
+        Todo todo = new Todo(UUID.randomUUID(),"Finish logic in Industrialist", "This should be make in Figma", false);
+
+        repository.save(todo);
+
+        Optional<Todo> todoFound = repository.findById(todo.getId());
+
+        assertTrue(todoFound.isPresent());
 
     }
 
@@ -84,4 +106,5 @@ class InMemoryTodoRepositoryTest {
 
         assertFalse(deleted.isPresent());
     }
+    
 }
