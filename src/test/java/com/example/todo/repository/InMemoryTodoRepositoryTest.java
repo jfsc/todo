@@ -30,17 +30,53 @@ class InMemoryTodoRepositoryTest {
     }
 
 
-//    @Test
-//    void shouldListTodos() {
-//
-//
-//    @Test
-//    void shouldUpdateTodo() {
-//
-//    }
-//
-//    @Test
-//    void shouldDeleteTodo() {
-//
-//    }
+    @Test
+    void shouldListTodos() {
+        Todo t1 = new Todo(UUID.randomUUID(), "A", "desc A", false);
+        Todo t2 = new Todo(UUID.randomUUID(), "B", "desc B", true);
+
+        repository.save(t1);
+        repository.save(t2);
+
+        List<Todo> todos = repository.findAll();
+        assertEquals(2, todos.size());
+
+        assertTrue(todos.stream().anyMatch(t -> t.getTitle().equals("A")));
+        assertTrue(todos.stream().anyMatch(t -> t.getTitle().equals("B")));
+    }
+
+    @Test
+    void shouldUpdateTodo() throws InterruptedException {
+        Todo todo = new Todo(UUID.randomUUID(), "Old Title", "Old desc", false);
+        repository.save(todo);
+
+        var oldUpdatedAt = todo.getUpdatedAt();
+
+        Thread.sleep(5);
+
+        todo.setTitle("New Title");
+        todo.setDescription("New description");
+        repository.save(todo);
+
+        Optional<Todo> found = repository.findById(todo.getId());
+        assertTrue(found.isPresent());
+
+        assertEquals("New Title", found.get().getTitle());
+        assertEquals("New description", found.get().getDescription());
+
+        assertEquals(todo.getCreatedAt(), found.get().getCreatedAt());
+
+        assertTrue(found.get().getUpdatedAt().isAfter(oldUpdatedAt));
+    }
+
+    @Test
+    void shouldDeleteTodo() {
+        Todo todo = new Todo(UUID.randomUUID(), "Delete me", "desc", false);
+        repository.save(todo);
+
+        repository.deleteById(todo.getId());
+
+        Optional<Todo> result = repository.findById(todo.getId());
+        assertTrue(result.isEmpty());
+    }
 }
