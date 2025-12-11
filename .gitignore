@@ -34,3 +34,5 @@ build/
 .vscode/
 
 comandos-docker.txt
+.idea/misc.xml
+.idea/workspace.xml
