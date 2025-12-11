@@ -30,17 +30,41 @@ class InMemoryTodoRepositoryTest {
     }
 
 
-//    @Test
-//    void shouldListTodos() {
-//
-//
-//    @Test
-//    void shouldUpdateTodo() {
-//
-//    }
-//
-//    @Test
-//    void shouldDeleteTodo() {
-//
-//    }
+    @Test
+    void shouldListTodos() {
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
+        repository.save(todo);
+
+        List<Todo> todoList = repository.findAll();
+
+        assertFalse(todoList.isEmpty());
+    }
+
+
+    @Test
+    void shouldUpdateTodo() {
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
+        repository.save(todo);
+
+        Todo found = repository.findById(todo.getId()).get();
+        found.setTitle("Test2");
+        found.setDescription("teste de criacao 2");
+        repository.save(found);
+
+        assertEquals(todo.getTitle(), found.getTitle());
+    }
+
+
+    @Test
+    void shouldDeleteTodo() {
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
+        repository.save(todo);
+
+        Optional<Todo> found = repository.findById(todo.getId());
+        assertTrue(found.isPresent());
+
+        repository.deleteById(todo.getId());
+
+        assertTrue(repository.findById(todo.getId()).isEmpty());
+    }
 }
