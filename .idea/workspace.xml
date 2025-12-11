@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="feat: creating tests repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" afterDir="false" />
     </list>
@@ -46,7 +45,11 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.TodoApplication.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldConstructor.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldCreateTodoConstructorThreeFields.executor": "Run",
     "JUnit.InMemoryTodoRepositoryTest.shouldDeleteTodo.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldGenerateIdIfNull.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldGenerateIdWhenSavingTodoWithoutId.executor": "Run",
     "JUnit.InMemoryTodoRepositoryTest.shouldListTodos.executor": "Run",
     "JUnit.InMemoryTodoRepositoryTest.shouldUpdateTodo.executor": "Run",
     "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
@@ -66,7 +69,39 @@
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.InMemoryTodoRepositoryTest.shouldListTodos">
+  <component name="RunManager" selected="JUnit.InMemoryTodoRepositoryTest.shouldCreateTodoConstructorThreeFields">
+    <configuration name="InMemoryTodoRepositoryTest.shouldConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryTodoRepositoryTest.shouldCreateTodoConstructorThreeFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldCreateTodoConstructorThreeFields" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InMemoryTodoRepositoryTest.shouldDeleteTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
@@ -83,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryTodoRepositoryTest.shouldListTodos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InMemoryTodoRepositoryTest.shouldGenerateIdIfNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
@@ -93,13 +128,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.todo.repository" />
       <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldListTodos" />
+      <option name="METHOD_NAME" value="shouldGenerateIdIfNull" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryTodoRepositoryTest.shouldUpdateTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InMemoryTodoRepositoryTest.shouldGenerateIdWhenSavingTodoWithoutId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
@@ -109,7 +144,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.todo.repository" />
       <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldUpdateTodo" />
+      <option name="METHOD_NAME" value="shouldGenerateIdWhenSavingTodoWithoutId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,9 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldListTodos" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldCreateTodoConstructorThreeFields" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldConstructor" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldGenerateIdIfNull" />
         <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldDeleteTodo" />
-        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldUpdateTodo" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldGenerateIdWhenSavingTodoWithoutId" />
       </list>
     </recent_temporary>
   </component>
@@ -132,6 +169,15 @@
       <option name="presentableId" value="Default" />
       <updated>1765410829477</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: creating tests repository">
+      <option name="closed" value="true" />
+      <created>1765483245563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765483245563</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,5 +190,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: creating tests repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: creating tests repository" />
   </component>
 </project>

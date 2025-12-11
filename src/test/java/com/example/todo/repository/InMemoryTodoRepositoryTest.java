@@ -4,6 +4,7 @@ import com.example.todo.domain.Todo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -28,7 +29,6 @@ class InMemoryTodoRepositoryTest {
         assertTrue(found.isPresent());
         assertEquals("Test", found.get().getTitle());
     }
-
 
     @Test
     void shouldListTodos() {
@@ -55,6 +55,33 @@ class InMemoryTodoRepositoryTest {
         Optional<Todo> found = repository.findById(todo.getId());
         assertTrue(found.isPresent());
         assertEquals("Updated Test", found.get().getTitle());
+    }
+
+    @Test
+    void shouldCreateTodoConstructorTwoFields(){
+        Todo todo = new Todo( "Test", "teste de criacao");
+        repository.save(todo);
+
+        assertEquals("Test", todo.getTitle());
+    }
+
+    @Test
+    void shouldCreateTodoConstructorThreeFields(){
+        Todo todo = new Todo( UUID.randomUUID(),"Test", true);
+        repository.save(todo);
+
+        assertEquals("Test", todo.getTitle());
+    }
+
+    @Test
+    void shouldGenerateIdIfNull(){
+        Todo todo = new Todo();
+        todo.setTitle("Teste");
+        todo.setDescription("Teste de descricao");
+        todo.setCreatedAt(Instant.now());
+
+        Todo savedTodo = repository.save(todo);
+        assertNotNull(savedTodo.getId());
     }
 
     @Test
