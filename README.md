@@ -1,3 +1,7 @@
+Professor: 
+- Sua branch não passava na automação do pipeline por usar  o prefixo errado "feat.".
+- Não vi "Eu [email] estou commitando na branch [minha feature branch]"
+
 Instruções rápidas para rodar:
 
 Descompacte o ZIP.
