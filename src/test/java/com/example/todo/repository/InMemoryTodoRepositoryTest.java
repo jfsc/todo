@@ -106,5 +106,5 @@ class InMemoryTodoRepositoryTest {
 
         assertFalse(deleted.isPresent());
     }
-    
+
 }
