@@ -1,5 +1,6 @@
 package com.example.todo.domain;
 
+import java.util.Objects;
 import java.time.Instant;
 import java.util.UUID;
 
@@ -51,5 +52,19 @@ public class Todo {
     public Instant getCreatedAt() { return createdAt; }
     public void setCreatedAt(Instant createdAt) { this.createdAt = createdAt; }
     public Instant getUpdatedAt() { return updatedAt; }
-    public void setUpdatedAt(Instant updatedAt) { this.updatedAt = updatedAt; }
+    public void setUpdatedAt(Instant updatedAt) {this.updatedAt = updatedAt;}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Todo todo = (Todo) o;
+        return Objects.equals(id, todo.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
 }
