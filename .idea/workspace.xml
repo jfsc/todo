@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="">
+    <list default="true" id="673b2a84-3cf1-4c93-8207-8f65ec121132" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,69 +15,114 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;vinileal12&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/jfsc/todo.git&quot;,
-    &quot;accountId&quot;: &quot;66e7dbe4-0524-4766-b176-4d59ed4ab6bc&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="36fwFCc9SFMhOEFBX2wVx8w5rec" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="36iEf3b1hX0RFBI8JOkvqRvcdUf" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.TodoApplication.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldDeleteTodo.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldListTodos.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldUpdateTodo.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature__vinicius",
+    "git-widget-placeholder": "feature__hugo__v2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Vinicius Leal/Documents/FACULDADE/ACCENTURE - 2025/3º FASE/projeto_10_12/todo",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "last_opened_file_path": "C:/Users/neves/Desktop/Nova pasta/todo"
   }
 }]]></component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RunManager" selected="JUnit.InMemoryTodoRepositoryTest.shouldListTodos">
+    <configuration name="InMemoryTodoRepositoryTest.shouldDeleteTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldDeleteTodo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryTodoRepositoryTest.shouldListTodos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldListTodos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryTodoRepositoryTest.shouldUpdateTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldUpdateTodo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldListTodos" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldUpdateTodo" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldDeleteTodo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="" />
-      <created>1765410829477</created>
+      <changelist id="673b2a84-3cf1-4c93-8207-8f65ec121132" name="Changes" comment="" />
+      <created>1765481093378</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1765410829477</updated>
+      <updated>1765481093378</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

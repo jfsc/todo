@@ -30,17 +30,43 @@ class InMemoryTodoRepositoryTest {
     }
 
 
-//    @Test
-//    void shouldListTodos() {
-//
-//
-//    @Test
-//    void shouldUpdateTodo() {
-//
-//    }
-//
-//    @Test
-//    void shouldDeleteTodo() {
-//
-//    }
+    @Test
+    void shouldListTodos() {
+        Todo newTodo = new Todo(UUID.randomUUID(), "Todo Test", "Todo test description", false);
+        repository.save(newTodo);
+
+        List<Todo> listTodos = repository.findAll();
+        assertFalse(listTodos.isEmpty());
+    }
+
+    @Test
+    void shouldUpdateTodo() {
+        Todo newTodo = new Todo(UUID.randomUUID(), "Todo Test", "Todo test description", false);
+        repository.save(newTodo);
+
+        newTodo.setTitle("Todo Test Update");
+        newTodo.setDescription("Todo test description updated");
+        newTodo.setDone(true);
+
+        repository.save(newTodo);
+
+        Todo updated = repository.findById(newTodo.getId()).orElseThrow(() -> new RuntimeException("Not found!"));
+
+        assertEquals("Todo Test Update", updated.getTitle());
+        assertEquals("Todo test description updated", updated.getDescription());
+        assertTrue(updated.isDone());
+    }
+
+    @Test
+    void shouldDeleteTodo() {
+        Todo newTodo = new Todo(UUID.randomUUID(), "Todo Test", "Todo test description", false);
+        repository.save(newTodo);
+
+        assertFalse(repository.findAll().isEmpty());
+
+        repository.deleteById(newTodo.getId());
+
+        assertTrue(repository.findAll().isEmpty());
+    }
+
 }
