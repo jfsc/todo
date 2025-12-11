@@ -24,9 +24,9 @@ class InMemoryTodoRepositoryTest {
         Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
         repository.save(todo);
 
-        Optional<Todo> found = repository.findById(todo.getId());
-        assertTrue(found.isPresent());
-        assertEquals("Test", found.get().getTitle());
+        Optional<Todo> encontrado = repository.findById(todo.getId());
+        assertTrue(encontrado.isPresent());
+        assertEquals("Test", encontrado.get().getTitle());
     }
 
 
@@ -51,15 +51,15 @@ class InMemoryTodoRepositoryTest {
         Todo original = new Todo(id, "Original", "descricao teste", false);
         repository.save(original);
 
-        Todo updated = new Todo(id, "Atualizado", "nova desceicao teste", true);
-        repository.update(id, updated);
+        Todo atualizado = new Todo(id, "Atualizado", "nova desceicao teste", true);
+        repository.update(id, atualizado);
 
-        Optional<Todo> found = repository.findById(id);
+        Optional<Todo> encontrado = repository.findById(id);
 
-        assertTrue(found.isPresent());
-        assertEquals("Atualizado", found.get().getTitle());
-        assertEquals("nova desceicao teste", found.get().getDescription());
-        assertTrue(found.get().isDone());
+        assertTrue(encontrado.isPresent());
+        assertEquals("Atualizado", encontrado.get().getTitle());
+        assertEquals("nova desceicao teste", encontrado.get().getDescription());
+        assertTrue(encontrado.get().isDone());
     }
 
     @Test
@@ -70,8 +70,30 @@ class InMemoryTodoRepositoryTest {
         repository.save(todo);
         repository.deleteById(id);
 
-        Optional<Todo> found = repository.findById(id);
+        Optional<Todo> encontrado = repository.findById(id);
 
-        assertTrue(found.isEmpty(), "O todo deveria ter sido deletado");
+        assertTrue(encontrado.isEmpty(), "O todo deveria ter sido deletado");
+    }
+
+    @Test
+    void shouldFindTodoById() {
+        UUID id = UUID.randomUUID();
+        Todo todo = new Todo(id, "Achar pelo id", "teste", false);
+
+        repository.save(todo);
+
+        Optional<Todo> encontrado = repository.findById(id);
+
+        assertTrue(encontrado.isPresent());
+        assertEquals(id, encontrado.get().getId());
+    }
+
+    @Test
+    void shouldNotFindTodoById() {
+        UUID id = UUID.randomUUID();
+
+        Optional<Todo> encontrado = repository.findById(id);
+
+        assertTrue(encontrado.isEmpty());
     }
 }
