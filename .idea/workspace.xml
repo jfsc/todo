@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/repository/InMemoryTodoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/repository/InMemoryTodoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/domain/TodoTeste.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/dto/TodoRequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/dto/TodoRequestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/exception/GlobalExceptionHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/exception/GlobalExceptionHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -46,19 +58,29 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.TodoApplication.executor": "Run",
+    "JUnit.All in todo-openapi-spring3 (1).executor": "Run",
+    "JUnit.All in todo-openapi-spring3 (2).executor": "Run",
+    "JUnit.All in todo-openapi-spring3 (3).executor": "Run",
+    "JUnit.All in todo-openapi-spring3 (4).executor": "Run",
+    "JUnit.All in todo-openapi-spring3 (5).executor": "Run",
+    "JUnit.All in todo-openapi-spring3.executor": "Run",
     "JUnit.InMemoryTodoRepositoryTest.executor": "Run",
+    "JUnit.TodoControllerTest.executor": "Run",
     "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
+    "Maven.todo-openapi-spring3 [install].executor": "Run",
     "Maven.todo-openapi-spring3 [spring-boot:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "feature__kamilav2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Vinicius Leal/Documents/FACULDADE/ACCENTURE - 2025/3º FASE/projeto_10_12/todo",
+    "last_opened_file_path": "C:/Users/kamil/OneDrive/Área de Trabalho/Accenture/treinamento/todo",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunAnythingCache">
@@ -67,33 +89,7 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="InMemoryTodoRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-openapi-spring3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todo.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="todo-openapi-spring3" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="todo-openapi-spring3" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JUnit.All in todo-openapi-spring3 (5)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="todo-openapi-spring3" />
       <option name="ENV_FILES" value="" />
@@ -128,11 +124,62 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <method v="2" />
     </configuration>
+    <configuration name="All in todo-openapi-spring3 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in todo-openapi-spring3 (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in todo-openapi-spring3 (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in todo-openapi-spring3 (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in todo-openapi-spring3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InMemoryTodoRepositoryTest" />
+        <item itemvalue="JUnit.All in todo-openapi-spring3 (5)" />
+        <item itemvalue="JUnit.All in todo-openapi-spring3 (1)" />
+        <item itemvalue="JUnit.All in todo-openapi-spring3" />
+        <item itemvalue="JUnit.All in todo-openapi-spring3 (4)" />
+        <item itemvalue="JUnit.All in todo-openapi-spring3 (3)" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -142,6 +189,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765410829477</updated>
+      <workItem from="1765560261555" duration="12000" />
     </task>
     <servers />
   </component>

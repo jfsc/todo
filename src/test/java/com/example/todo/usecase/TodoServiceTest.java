@@ -58,15 +58,15 @@ class TodoServiceTest {
         verify(repository, times(1)).findById(sampleId);
     }
 
-    // @Test
-    // void shouldReturnEmptyWhenTodoNotFound() {
-    //     when(repository.findById(sampleId)).thenReturn(Optional.empty());
+     @Test
+     void shouldReturnEmptyWhenTodoNotFound() {
+         when(repository.findById(sampleId)).thenReturn(Optional.empty());
 
-    //     Optional<Todo> result = service.find(sampleId);
+         Optional<Todo> result = service.find(sampleId);
 
-    //     assertFalse(result.isPresent());
-    //     verify(repository, times(1)).findById(sampleId);
-    // }
+         assertFalse(result.isPresent());
+         verify(repository, times(1)).findById(sampleId);
+     }
 
     @Test
     void shouldListAllTodos() {
@@ -101,21 +101,21 @@ class TodoServiceTest {
         verify(repository, times(1)).save(sampleTodo);
     }
 
-    // @Test
-    // void shouldThrowExceptionWhenUpdatingNonExistentTodo() {
-    //     UUID nonExistentId = UUID.randomUUID();
-    //     Todo updateData = new Todo(nonExistentId, "New Title", "New Description", false);
+     @Test
+     void shouldThrowExceptionWhenUpdatingNonExistentTodo() {
+         UUID nonExistentId = UUID.randomUUID();
+         Todo updateData = new Todo(nonExistentId, "New Title", "New Description", false);
 
-    //     when(repository.findById(nonExistentId)).thenReturn(Optional.empty());
+         when(repository.findById(nonExistentId)).thenReturn(Optional.empty());
 
-    //     RuntimeException exception = assertThrows(RuntimeException.class, () -> {
-    //         service.update(nonExistentId, updateData);
-    //     });
+         RuntimeException exception = assertThrows(RuntimeException.class, () -> {
+             service.update(nonExistentId, updateData);
+         });
 
-    //     assertEquals("Not found", exception.getMessage());
-    //     verify(repository, times(1)).findById(nonExistentId);
-    //     verify(repository, never()).save(any());
-    // }
+         assertEquals("Not found", exception.getMessage());
+         verify(repository, times(1)).findById(nonExistentId);
+         verify(repository, never()).save(any());
+     }
 
     @Test
     void shouldDeleteTodo() {

@@ -35,29 +35,29 @@ class GlobalExceptionHandlerTest {
         assertNotNull(body.get("timestamp"));
     }
 
-    // @Test
-    // void shouldHandleRuntimeExceptionWithDifferentMessage() {
-    //     RuntimeException exception = new RuntimeException("Not found");
+     @Test
+     void shouldHandleRuntimeExceptionWithDifferentMessage() {
+         RuntimeException exception = new RuntimeException("Not found");
 
-    //     ResponseEntity<Map<String, Object>> response = handler.handleRuntime(exception);
+         ResponseEntity<Map<String, Object>> response = handler.handleRuntime(exception);
 
-    //     assertNotNull(response);
-    //     assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+         assertNotNull(response);
+         assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
         
-    //     Map<String, Object> body = response.getBody();
-    //     assertNotNull(body);
-    //     assertEquals("Not found", body.get("title"));
-    // }
+         Map<String, Object> body = response.getBody();
+         assertNotNull(body);
+         assertEquals("Not found", body.get("title"));
+     }
 
-    // @Test
-    // void shouldIncludeTimestampInResponse() {
-    //     RuntimeException exception = new RuntimeException("Error");
+     @Test
+     void shouldIncludeTimestampInResponse() {
+         RuntimeException exception = new RuntimeException("Error");
 
-    //     ResponseEntity<Map<String, Object>> response = handler.handleRuntime(exception);
+         ResponseEntity<Map<String, Object>> response = handler.handleRuntime(exception);
 
-    //     Map<String, Object> body = response.getBody();
-    //     assertNotNull(body);
-    //     assertTrue(body.containsKey("timestamp"));
-    //     assertNotNull(body.get("timestamp"));
-    // }
+         Map<String, Object> body = response.getBody();
+         assertNotNull(body);
+         assertTrue(body.containsKey("timestamp"));
+         assertNotNull(body.get("timestamp"));
+     }
 }

@@ -34,33 +34,33 @@ class TodoRequestTest {
         assertTrue(request.isDone());
     }
 
-    // @Test
-    // void shouldConvertToDomain() {
-    //     TodoRequest request = new TodoRequest();
-    //     request.setTitle("My Title");
-    //     request.setDescription("My Description");
-    //     request.setDone(true);
+     @Test
+     void shouldConvertToDomain() {
+         TodoRequest request = new TodoRequest();
+         request.setTitle("My Title");
+         request.setDescription("My Description");
+         request.setDone(true);
 
-    //     Todo todo = request.toDomain();
+         Todo todo = request.toDomain();
 
-    //     assertNotNull(todo);
-    //     assertNotNull(todo.getId());
-    //     assertEquals("My Title", todo.getTitle());
-    //     assertEquals("My Description", todo.getDescription());
-    //     assertTrue(todo.isDone());
-    // }
+         assertNotNull(todo);
+         assertNotNull(todo.getId());
+         assertEquals("My Title", todo.getTitle());
+         assertEquals("My Description", todo.getDescription());
+         assertTrue(todo.isDone());
+     }
 
-    // @Test
-    // void shouldConvertToDomainWithNullDescription() {
-    //     TodoRequest request = new TodoRequest();
-    //     request.setTitle("My Title");
-    //     request.setDone(false);
+     @Test
+     void shouldConvertToDomainWithNullDescription() {
+         TodoRequest request = new TodoRequest();
+         request.setTitle("My Title");
+         request.setDone(false);
 
-    //     Todo todo = request.toDomain();
+         Todo todo = request.toDomain();
 
-    //     assertNotNull(todo);
-    //     assertEquals("My Title", todo.getTitle());
-    //     assertNull(todo.getDescription());
-    //     assertFalse(todo.isDone());
-    // }
+         assertNotNull(todo);
+         assertEquals("My Title", todo.getTitle());
+         assertNull(todo.getDescription());
+         assertFalse(todo.isDone());
+     }
 }
