@@ -50,9 +50,9 @@ class InMemoryTodoRepositoryTest {
 
     @Test
     void shouldListAllExistingTodos() {
-        Todo todo1 = new Todo(UUID.randomUUID(), "Test1", "teste de criacao1", false);
+        Todo todo1 = new Todo(UUID.randomUUID(), "Test1", "teste de criacao1", false, null, null);
         repository.save(todo1);
-        Todo todo2 = new Todo(UUID.randomUUID(), "Test2", "teste de criacao2", true);
+        Todo todo2 = new Todo(UUID.randomUUID(), "Test2", "teste de criacao2", true, null, null);
         repository.save(todo2);
 
         List<Todo> todoList = repository.findAll();
@@ -84,17 +84,16 @@ class InMemoryTodoRepositoryTest {
     @Test
     void shouldUpdateTodoData() {
 
-        UUID idOriginal = UUID.randomUUID();
         String titleOriginal = "Tarefa Antiga";
         String descriptionOriginal = "Descrição inicial";
 
-        Todo todoOriginal = new Todo(idOriginal, titleOriginal, descriptionOriginal, false);
+        Todo todoOriginal = new Todo(titleOriginal, descriptionOriginal);
         repository.save(todoOriginal);
 
         String NewTitle = "Tarefa Atualizada";
         String NewDescription = "Descrição corrigida";
 
-        Todo todoUpdated = new Todo(idOriginal, NewTitle, NewDescription, true);
+        Todo todoUpdated = new Todo(todoOriginal.getId(), NewTitle, NewDescription, false, null, null);
         repository.save(todoUpdated);
 
         Optional<Todo> found = repository.findById(todoUpdated.getId());
