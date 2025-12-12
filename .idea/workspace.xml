@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="fix 1° bug on @PathVariable(&quot;id&quot;) no informated methods, too fix o coverage dos tests, for  94%.">
+    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="Corrigido 1° bugem no @PathVariable(&quot;id&quot;) e o 2° bug que foi no medo de DELETE tanto no CONTROLLER como no SERVICE , como também foi corrigido a cobertura dos testes para 94%.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/controller/TodoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/usecase/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/usecase/TodoService.java" afterDir="false" />
@@ -246,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765559028190</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Corrigido 1° bugem no @PathVariable(&quot;id&quot;) e o 2° bug que foi no medo de DELETE tanto no CONTROLLER como no SERVICE , como também foi corrigido a cobertura dos testes para 94%.">
+      <option name="closed" value="true" />
+      <created>1765559969718</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765559969718</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +273,7 @@
     <MESSAGE value="Fixed 1 bug in @PathVariable(&quot;id&quot;) which was not including the &quot;Id&quot; in the get, put, and delete methods; corrected the test coverage to 94%." />
     <MESSAGE value="Merge remote-tracking branch 'origin/feature_jonnatan_v2' into feature_jonnatan_v2&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" />
     <MESSAGE value="fix 1° bug on @PathVariable(&quot;id&quot;) no informated methods, too fix o coverage dos tests, for  94%." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 1° bug on @PathVariable(&quot;id&quot;) no informated methods, too fix o coverage dos tests, for  94%." />
+    <MESSAGE value="Corrigido 1° bugem no @PathVariable(&quot;id&quot;) e o 2° bug que foi no medo de DELETE tanto no CONTROLLER como no SERVICE , como também foi corrigido a cobertura dos testes para 94%." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigido 1° bugem no @PathVariable(&quot;id&quot;) e o 2° bug que foi no medo de DELETE tanto no CONTROLLER como no SERVICE , como também foi corrigido a cobertura dos testes para 94%." />
   </component>
 </project>

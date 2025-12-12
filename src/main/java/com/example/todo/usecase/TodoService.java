@@ -33,6 +33,7 @@ public class TodoService {
         return repo.save(existing);
     }
 
+    //corrigido bug aqui // repo.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
     public void delete(UUID id) {
         repo.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
         repo.deleteById(id);

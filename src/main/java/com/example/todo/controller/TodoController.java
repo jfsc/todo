@@ -39,18 +39,19 @@ public class TodoController {
         return ResponseEntity.created(URI.create("/api/todos/" + created.getId()))
                 .body(TodoResponse.from(created));
     }
-
+    //corrigido bug aqui
     @GetMapping("/{id}")
     public TodoResponse get(@PathVariable("id") UUID id) {
         return service.find(id).map(TodoResponse::from)
                 .orElseThrow(() -> new RuntimeException("Not found"));
     }
-
+    //corrigido bug aqui
     @PutMapping("/{id}")
     public TodoResponse update(@PathVariable("id") UUID id, @Valid @RequestBody TodoRequest req) {
         return TodoResponse.from(service.update(id, req.toDomain()));
     }
 
+    //corrigido bug aqui
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable("id") UUID id) {
         service.delete(id);
