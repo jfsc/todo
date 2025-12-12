@@ -53,7 +53,9 @@
     "Maven.todo-openapi-spring3 [-q,-Dtest=*Test...].executor": "Run",
     "Maven.todo-openapi-spring3 [clean,install].executor": "Run",
     "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
+    "Maven.todo-openapi-spring3 [clean,test].executor": "Run",
     "Maven.todo-openapi-spring3 [spring-boot:run].executor": "Run",
+    "Maven.todo-openapi-spring3 [test...].executor": "Run",
     "Maven.todo-openapi-spring3 [test].executor": "Run",
     "Maven.todo-openapi-spring3 [teste].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -75,6 +77,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.todo.controller" />
       <recent name="com.example.todo.usecase" />
     </key>
   </component>
@@ -85,6 +88,8 @@
       <command value="mvn -q -Dtest=*Test test" />
       <command value="mvn test" />
       <command value="mvn clean install" />
+      <command value="mvn test -Dtest=TodoControllerTest#testList" />
+      <command value="mvn clean test" />
       <command value="mvn clean package" />
     </option>
   </component>

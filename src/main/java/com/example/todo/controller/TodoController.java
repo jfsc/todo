@@ -1,3 +1,4 @@
+
 package com.example.todo.controller;
 
 import com.example.todo.domain.Todo;
@@ -9,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import jakarta.validation.Valid;  // <-- CORRETO
+import jakarta.validation.Valid;
 
 import java.net.URI;
 import java.util.List;
@@ -39,20 +40,21 @@ public class TodoController {
                 .body(TodoResponse.from(created));
     }
 
+    // Faltava @PathVariable("id") - sem especificar o nome,
     @GetMapping("/{id}")
-    public TodoResponse get(@PathVariable UUID id) {
+    public TodoResponse get(@PathVariable("id") UUID id) {
         return service.find(id).map(TodoResponse::from)
                 .orElseThrow(() -> new RuntimeException("Not found"));
     }
 
     @PutMapping("/{id}")
-    public TodoResponse update(@PathVariable UUID id, @Valid @RequestBody TodoRequest req) {
+    public TodoResponse update(@PathVariable("id") UUID id, @Valid @RequestBody TodoRequest req) {
         return TodoResponse.from(service.update(id, req.toDomain()));
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable UUID id) {
+    public void delete(@PathVariable("id") UUID id) {
         service.delete(id);
     }
 }
