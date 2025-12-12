@@ -24,4 +24,5 @@ public class InMemoryTodoRepository {
     public Optional<Todo> findById(UUID id) { return Optional.ofNullable(store.get(id)); }
     public List<Todo> findAll() { return store.values().stream().collect(Collectors.toList()); }
     public void deleteById(UUID id) { store.remove(id); }
+    public void clear() { store.clear(); }
 }
