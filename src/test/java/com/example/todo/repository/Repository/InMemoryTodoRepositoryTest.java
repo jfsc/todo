@@ -25,6 +25,7 @@ class InMemoryTodoRepositoryTest {
     @Test
     void shouldCreateTodoWithoutId() {
         Todo todo = new Todo();
+        todo.setId(null);
         todo.setTitle("No ID");
         todo.setDescription("Test without ID");
 

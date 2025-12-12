@@ -23,13 +23,13 @@ public class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
 
         Resource resource = new ClassPathResource(CONFIG_PATH);
 
-        // Caso 1: arquivo TOML não existe
+
         if (!resource.exists()) {
             System.out.println("TOML config not found: " + CONFIG_PATH);
             return;
         }
 
-        // Caso 2: arquivo existe → tentar carregar
+
         try (InputStream is = resource.getInputStream()) {
 
             Toml toml = new Toml().read(is);
