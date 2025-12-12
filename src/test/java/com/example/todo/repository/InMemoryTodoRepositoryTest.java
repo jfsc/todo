@@ -72,4 +72,19 @@ class InMemoryTodoRepositoryTest {
         Optional<Todo> found = repository.findById(todo.getId());
         assertFalse(found.isPresent());
     }
+
+    @Test
+    void shouldAssignIdWhenSavingTodoWithoutId() {
+        Todo todo = new Todo();
+        todo.setId(null);
+        todo.setTitle("No Id");
+        todo.setDescription("created without id");
+
+        Todo saved = repository.save(todo);
+
+        assertNotNull(saved.getId());
+        Optional<Todo> found = repository.findById(saved.getId());
+        assertTrue(found.isPresent());
+        assertEquals("No Id", found.get().getTitle());
+    }
 }
