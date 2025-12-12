@@ -11,15 +11,17 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+        // exceção global -> 500
         @ExceptionHandler(RuntimeException.class)
         public ResponseEntity<Map<String, Object>> handleRuntime(RuntimeException ex) {
+            HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
             Map<String,Object> body = Map.of(
                 "type", "about:blank",
                 "title", ex.getMessage(),
-                "status", 404,
+                "status", status.value(),
                 "timestamp", Instant.now().toString()
             );
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
+            return ResponseEntity.status(status).body(body);
         }
 
         @ExceptionHandler(IdNullException.class)
@@ -28,7 +30,19 @@ public class GlobalExceptionHandler {
             Map<String,Object> body = Map.of(
                 "type", "about:blank",
                 "title", error.getMessage(),
-                "status", status,
+                "status", status.value(),
+                "timestamp", Instant.now().toString()
+            );
+            return ResponseEntity.status(status).body(body);
+        }
+
+        @ExceptionHandler(TodoNotFoundException.class)
+        public ResponseEntity<Map<String, Object>> handleTodoNotFoundException(TodoNotFoundException error) {
+            HttpStatus status = HttpStatus.valueOf(error.getCode());
+            Map<String,Object> body = Map.of(
+                "type", "about:blank",
+                "title", error.getMessage(),
+                "status", status.value(),
                 "timestamp", Instant.now().toString()
             );
             return ResponseEntity.status(status).body(body);
