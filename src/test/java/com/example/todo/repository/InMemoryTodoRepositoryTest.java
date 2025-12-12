@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -73,4 +74,57 @@ class InMemoryTodoRepositoryTest {
         assertFalse(found.isPresent());
 
     }
+
+    @Test
+    void saveShouldCreateIdWhenNull() {
+        Todo t = new Todo();
+        t.setId(null);
+
+        Todo saved = repository.save(t);
+
+        assertNotNull(saved.getId());
+    }
+
+    @Test
+    void saveShouldNotOverwriteExistingId() {
+        UUID id = UUID.randomUUID();
+        Todo t = new Todo();
+        t.setId(id);
+
+        Todo saved = repository.save(t);
+
+        assertEquals(id, saved.getId());
+    }
+
+    @Test
+    void shouldCreateTodoUsingFirstConstructor() {
+        Todo todo = new Todo("titulo", "descricao");
+
+        assertNotNull(todo.getId());
+        assertEquals("titulo", todo.getTitle());
+        assertEquals("descricao", todo.getDescription());
+        assertFalse(todo.isDone());
+    }
+
+
+    @Test
+    void shouldCreateTodoUsingSecondConstructor() {
+        UUID id = UUID.randomUUID();
+        Todo todo = new Todo(id, "titulo", true);
+
+        assertEquals(id, todo.getId());
+        assertEquals("titulo", todo.getTitle());
+        assertEquals("", todo.getDescription());
+        assertTrue(todo.isDone());
+    }
+
+
+    @Test
+    void getterShouldReturnUpdatedAt() {
+        Todo todo = new Todo("Titulo", "Descricao");
+        Instant updated = todo.getUpdatedAt();
+        assertEquals(todo.getUpdatedAt(), updated);
+    }
+
+
 }
