@@ -17,6 +17,7 @@ class InMemoryTodoRepositoryTest {
     @BeforeEach
     void setup() {
         repository = new InMemoryTodoRepository();
+        repository.clear();
     }
 
     @Test
@@ -33,7 +34,7 @@ class InMemoryTodoRepositoryTest {
    @Test
    void shouldListTodos() {
 	   Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
-	    Todo todo2 = new Todo(UUID.randomUUID(), "Test2", "teste de criacao", false);
+       Todo todo2 = new Todo(UUID.randomUUID(), "Test2", "teste de criacao", false);
 
 	    repository.save(todo);
 	    repository.save(todo2);
