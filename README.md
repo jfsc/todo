@@ -3,6 +3,7 @@
 A minimal **Todo API** built with **Java 17**, **Spring Boot 3**, **OpenAPI 2.0**, **TOML config loader**, and structured under **Clean Architecture**.
 
 ---
+
 ## 📁 Project Structure
 
 ```
@@ -25,7 +26,9 @@ src/
  └── test/
       └── com/example/todo/        ← JUnit 5 tests
 ```
+
 ---
+
 ## How to Run
 
 ### **1. Clone the repository**
@@ -54,6 +57,7 @@ Swagger UI:
 ```
 http://localhost:8080/swagger/index.html
 ```
+
 ---
 
 ## Running Tests
@@ -130,3 +134,7 @@ cauanynunes00@gmail.com está comitando na develop
 viniciusleal952@gmail.com esta comintando na davelop
 
 leonardoag1506@gmail.com está comitando na develop
+
+## Sobre os bugs
+
+Para detalhes do primeiro bug identificado, acessar a classe TodoController.java

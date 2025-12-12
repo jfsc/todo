@@ -1,3 +1,12 @@
+//-- BUG 01 --
+
+/*O compilador Java não inclui os nomes dos parâmetros no bytecode por padrão. No entanto,
+* o Spring Boot necessita do nome do parâmetro para fazer o binding. O Spring não sabe que
+* {id} corresponde a id, ocasionando o erro "Name for argument of type [java.util.UUID]
+* not specified, and parameter name information not available via reflection. Ensure that
+* the compiler uses the '-parameters' flag." Para evitar o erro, deve-se passar a notação
+* referente ao id da segunte forma: @PathVariable("id")*/
+
 package com.example.todo.controller;
 
 import com.example.todo.domain.Todo;
@@ -40,19 +49,19 @@ public class TodoController {
     }
 
     @GetMapping("/{id}")
-    public TodoResponse get(@PathVariable UUID id) {
+    public TodoResponse get(@PathVariable("id") UUID id) {
         return service.find(id).map(TodoResponse::from)
                 .orElseThrow(() -> new RuntimeException("Not found"));
     }
 
     @PutMapping("/{id}")
-    public TodoResponse update(@PathVariable UUID id, @Valid @RequestBody TodoRequest req) {
+    public TodoResponse update(@PathVariable("id") UUID id, @Valid @RequestBody TodoRequest req) {
         return TodoResponse.from(service.update(id, req.toDomain()));
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable UUID id) {
+    public void delete(@PathVariable("id") UUID id) {
         service.delete(id);
     }
 }
