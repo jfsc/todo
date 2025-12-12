@@ -108,7 +108,8 @@ public class TodoServiceTest {
     @Test
     void testDelete() {
         UUID id = UUID.randomUUID();
-
+        Todo todo = new Todo();
+        when(repository.findById(id)).thenReturn(Optional.of(todo));
         service.delete(id);
 
         verify(repository).deleteById(id);
