@@ -1,5 +1,6 @@
 package com.example.todo.controller;
 
+import com.example.todo.exception.GlobalExceptionHandler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.example.todo.dto.TodoRequest;
 import com.example.todo.repository.InMemoryTodoRepository;
@@ -27,7 +28,9 @@ class TodoControllerTest {
     void setup() {
         repo = new InMemoryTodoRepository();
         service = new TodoService(repo);
-        mvc = standaloneSetup(new TodoController(service)).build();
+        mvc = standaloneSetup(new TodoController(service))
+                .setControllerAdvice(new GlobalExceptionHandler())
+                .build();
     }
 
     @Test

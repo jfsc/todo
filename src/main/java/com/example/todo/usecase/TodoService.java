@@ -2,7 +2,9 @@ package com.example.todo.usecase;
 
 import com.example.todo.domain.Todo;
 import com.example.todo.repository.InMemoryTodoRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.Instant;
 import java.util.List;
@@ -30,7 +32,7 @@ public class TodoService {
     }
 
     public Todo update(UUID id, Todo update) {
-        Todo existing = repo.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
+        Todo existing = repo.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Not found"));
 
         existing.setTitle(update.getTitle());
         existing.setDescription(update.getDescription());
