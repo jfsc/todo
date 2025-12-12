@@ -23,5 +23,8 @@ public class TodoService {
         existing.setDone(update.isDone());
         return repo.save(existing);
     }
-    public void delete(UUID id) { repo.deleteById(id); }
+    public void delete(UUID id) {
+        Todo deletedTodo = repo.findById(id).orElseThrow(() -> new RuntimeException("Não foi possível encontrar a tarefa!"));
+        repo.deleteById(deletedTodo.getId());
+    }
 }
