@@ -34,6 +34,7 @@ public class TodoService {
     }
 
     public void delete(UUID id) {
+        repo.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
         repo.deleteById(id);
     }
 }

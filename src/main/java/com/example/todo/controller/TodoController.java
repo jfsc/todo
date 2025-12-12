@@ -1,5 +1,6 @@
 package com.example.todo.controller;
 
+import com.example.todo.InMemoryTodoRepository;
 import com.example.todo.domain.Todo;
 import com.example.todo.dto.TodoRequest;
 import com.example.todo.dto.TodoResponse;
@@ -51,8 +52,8 @@ public class TodoController {
     }
 
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable("id") UUID id) {
+    public ResponseEntity<Void> delete(@PathVariable("id") UUID id) {
         service.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }
