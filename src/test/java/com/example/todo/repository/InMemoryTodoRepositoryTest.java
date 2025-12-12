@@ -29,6 +29,14 @@ class InMemoryTodoRepositoryTest {
         assertEquals("Test", encontrado.get().getTitle());
     }
 
+    @Test
+    void shouldCreateTodoNull() {
+        Todo todoNull = new Todo(null, null, null, false);
+        repository.save(todoNull);
+        Optional<Todo> found = repository.findById(todoNull.getId());
+        assertTrue(found.isPresent());
+
+    }
 
     @Test
     void shouldListTodos() {
@@ -47,19 +55,21 @@ class InMemoryTodoRepositoryTest {
 
     @Test
     void shouldUpdateTodo() {
-        UUID id = UUID.randomUUID();
-        Todo original = new Todo(id, "Original", "descricao teste", false);
-        repository.save(original);
+        Todo todo1 = new Todo(UUID.randomUUID(),"Kamila task", "Kamila", false);
+        repository.save(todo1);
 
-        Todo atualizado = new Todo(id, "Atualizado", "nova desceicao teste", true);
-        repository.update(id, atualizado);
+        todo1.setTitle("Kamila test");
+        todo1.setDescription("Updated description");
+        todo1.setDone(true);
 
-        Optional<Todo> encontrado = repository.findById(id);
+        repository.save(todo1);
 
-        assertTrue(encontrado.isPresent());
-        assertEquals("Atualizado", encontrado.get().getTitle());
-        assertEquals("nova desceicao teste", encontrado.get().getDescription());
-        assertTrue(encontrado.get().isDone());
+        Optional<Todo> updated = repository.findById(todo1.getId());
+
+        assertTrue(updated.isPresent());
+        assertEquals("Kamila test", updated.get().getTitle());
+        assertEquals("Updated description", updated.get().getDescription());
+        assertTrue(updated.get().isDone());
     }
 
     @Test
