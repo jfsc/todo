@@ -10,6 +10,14 @@ public class TodoRequest {
     private String description;
     private boolean done;
 
+    public TodoRequest() {}
+
+    public TodoRequest(String title, String description, boolean done) {
+        this.title = title;
+        this.description = description;
+        this.done = done;
+    }
+
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
     public String getDescription() { return description; }

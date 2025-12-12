@@ -1,5 +1,6 @@
 package com.example.todo.usecase;
 
+
 import com.example.todo.domain.Todo;
 import com.example.todo.repository.InMemoryTodoRepository;
 import org.springframework.stereotype.Service;
@@ -23,5 +24,7 @@ public class TodoService {
         existing.setDone(update.isDone());
         return repo.save(existing);
     }
-    public void delete(UUID id) { repo.deleteById(id); }
+    public void delete(UUID id) { repo.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
+        repo.deleteById(id);
+    }
 }
