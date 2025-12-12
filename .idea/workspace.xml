@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/domain/TodoTeste.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/dto/TodoRequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/dto/TodoRequestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/exception/GlobalExceptionHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/exception/GlobalExceptionHandlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +39,9 @@
     &quot;accountId&quot;: &quot;66e7dbe4-0524-4766-b176-4d59ed4ab6bc&quot;
   }
 }</component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -66,6 +62,7 @@
     "JUnit.All in todo-openapi-spring3.executor": "Run",
     "JUnit.InMemoryTodoRepositoryTest.executor": "Run",
     "JUnit.TodoControllerTest.executor": "Run",
+    "JUnit.TomlEnvironmentPostProcessorTest.executor": "Run",
     "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
     "Maven.todo-openapi-spring3 [install].executor": "Run",
     "Maven.todo-openapi-spring3 [spring-boot:run].executor": "Run",
@@ -79,7 +76,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -89,7 +86,7 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in todo-openapi-spring3 (5)">
+  <component name="RunManager" selected="JUnit.TomlEnvironmentPostProcessorTest">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="todo-openapi-spring3" />
       <option name="ENV_FILES" value="" />
@@ -132,14 +129,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in todo-openapi-spring3 (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-openapi-spring3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All in todo-openapi-spring3 (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <option name="PACKAGE_NAME" value="" />
@@ -164,13 +153,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TomlEnvironmentPostProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.config" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.config.TomlEnvironmentPostProcessorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest" />
         <item itemvalue="JUnit.All in todo-openapi-spring3 (5)" />
         <item itemvalue="JUnit.All in todo-openapi-spring3 (1)" />
         <item itemvalue="JUnit.All in todo-openapi-spring3" />
         <item itemvalue="JUnit.All in todo-openapi-spring3 (4)" />
-        <item itemvalue="JUnit.All in todo-openapi-spring3 (3)" />
       </list>
     </recent_temporary>
   </component>
