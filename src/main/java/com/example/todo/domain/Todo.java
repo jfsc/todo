@@ -12,11 +12,13 @@ public class Todo {
     private Instant updatedAt;
 
     // Full Construtor
-    public Todo(UUID id, String title, String description, boolean done) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
+    public Todo(UUID id, String title, String description, boolean done, Instant createdAt, Instant updatedAt) {
+        this.id = id == null ? UUID.randomUUID() : id;
+        this.title = title == null ? "" : title;
+        this.description = description == null ? "" : description;
         this.done = done;
+        this.createdAt = createdAt == null ? Instant.now() : createdAt;
+        this.updatedAt = updatedAt == null ? Instant.now() : updatedAt;
     }
 
     public Todo() {
@@ -24,6 +26,8 @@ public class Todo {
         this.title = "";
         this.description = "";
         this.done = false;
+        this.createdAt = Instant.now();
+        this.updatedAt = Instant.now();
     }
 
     // Construtor without
@@ -32,6 +36,8 @@ public class Todo {
         this.title = title;
         this.description = description;
         this.done = false;
+        this.createdAt = Instant.now();
+        this.updatedAt = Instant.now();
     }
 
     // Other Construtor
@@ -40,6 +46,8 @@ public class Todo {
         this.title = title;
         this.description = "";
         this.done = done;
+        this.createdAt = Instant.now();
+        this.updatedAt = Instant.now();
     }
 
     public UUID getId() {
