@@ -17,7 +17,6 @@ class GlobalExceptionHandlerTest {
 
     @BeforeEach
     void setup() {
-        // monta MockMvc manualmente com o Controller de teste e o ControllerAdvice
         mockMvc = MockMvcBuilders
                 .standaloneSetup(new TestController())
                 .setControllerAdvice(new GlobalExceptionHandler())

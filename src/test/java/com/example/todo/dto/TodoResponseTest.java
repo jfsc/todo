@@ -51,6 +51,6 @@ class TodoResponseTest {
         assertNull(response.getDescription());
         assertNull(response.getCreatedAt());
         assertNull(response.getUpdatedAt());
-        assertFalse(response.isDone()); // porque no Todo done = false
+        assertFalse(response.isDone());
     }
 }

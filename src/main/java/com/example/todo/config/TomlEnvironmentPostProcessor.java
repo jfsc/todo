@@ -16,12 +16,27 @@ public class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
 
     private static final String NAME = "tomlPropertySource";
 
+    // ONLY FOR TETSTS
+    static Resource overrideResource;
+
+    public static void setOverrideResource(Resource resource) {
+        overrideResource = resource;
+    }
+
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
         try {
-            Resource res = new ClassPathResource("confd_spring/app_config.toml");
+            Resource res;
+
+            // In case of fake resource injected for test
+            if (overrideResource != null) {
+                res = overrideResource;
+            } else {
+                res = new ClassPathResource("confd_spring/app_config.toml");
+            }
+
             if (!res.exists()) {
-                System.out.println("TOML config not found: confd_spring/app_config.toml");
+                System.out.println("TOML config not found");
                 return;
             }
 
@@ -29,8 +44,8 @@ public class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
                 Toml toml = new Toml().read(is);
                 Map<String, Object> map = toml.toMap();
 
-                MutablePropertySources sources = environment.getPropertySources();
-                sources.addFirst(new MapPropertySource(NAME, map));
+                environment.getPropertySources()
+                        .addFirst(new MapPropertySource(NAME, map));
 
                 System.out.println("TOML config loaded: " + map.keySet());
             }

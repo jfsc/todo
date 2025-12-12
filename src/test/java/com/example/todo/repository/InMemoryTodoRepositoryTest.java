@@ -79,4 +79,34 @@ class InMemoryTodoRepositoryTest {
         Optional<Todo> result = repository.findById(todo.getId());
         assertTrue(result.isEmpty());
     }
+
+    @Test
+    void shouldGenerateIdWhenSavingTodoWithoutId() {
+        Todo todo = new Todo(null, "AutoID", "desc", false);
+        todo.setCreatedAt(null); // para testar também o createdAt == null
+
+        Todo saved = repository.save(todo);
+
+        assertNotNull(saved.getId());
+        assertNotNull(saved.getCreatedAt());
+        assertNotNull(saved.getUpdatedAt());
+    }
+
+    @Test
+    void shouldReturnEmptyListWhenNoTodosSaved() {
+        List<Todo> todos = repository.findAll();
+        assertTrue(todos.isEmpty());
+    }
+
+    @Test
+    void shouldNotFailWhenDeletingNonExistingId() {
+        UUID randomId = UUID.randomUUID();
+
+        // não deve lançar exceção
+        assertDoesNotThrow(() -> repository.deleteById(randomId));
+
+        // e a store continua vazia
+        assertTrue(repository.findAll().isEmpty());
+    }
+
 }
