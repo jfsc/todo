@@ -13,8 +13,8 @@ import java.util.Optional;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
 
 public class TodoServiceTest {
 
@@ -114,4 +114,18 @@ public class TodoServiceTest {
 
         verify(repository).deleteById(id);
     }
+
+    @Test
+    void testDelete_NotFound() {
+        UUID id = UUID.randomUUID();
+
+        when(repository.findById(id)).thenReturn(Optional.empty());
+
+        assertThrows(RuntimeException.class, () -> service.delete(id));
+
+        verify(repository, never()).deleteById(any());
+    }
+
+
+
 }

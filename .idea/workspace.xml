@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,23 +107,7 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TodoServiceTest.testDelete (1)">
-    <configuration name="TodoControllerTest.shouldDeleteTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-openapi-spring3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todo.repository.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.TodoControllerTest" />
-      <option name="METHOD_NAME" value="shouldDeleteTodo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TodoServiceTest.testDelete_NotFound">
     <configuration name="TodoControllerTest.shouldFailValidationOnCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
@@ -187,6 +172,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TodoServiceTest.testDelete_NotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.usecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
+      <option name="METHOD_NAME" value="testDelete_NotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -198,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TodoServiceTest.testDelete_NotFound" />
         <item itemvalue="JUnit.TodoServiceTest.testDelete (1)" />
         <item itemvalue="JUnit.TodoControllerTest.shouldGetTodo" />
         <item itemvalue="JUnit.TodoControllerTest.shouldFailValidationOnCreate" />
         <item itemvalue="JUnit.TodoServiceTest.testDelete" />
-        <item itemvalue="JUnit.TodoControllerTest.shouldDeleteTodo" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765560087956</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%.">
+      <option name="closed" value="true" />
+      <created>1765560578590</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765560578590</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
