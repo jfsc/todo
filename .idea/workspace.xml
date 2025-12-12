@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62522e0f-6206-4288-a1f3-14e3d16e5014" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/domain/Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/domain/Todo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/dto/TodoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/dto/TodoResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/repository/InMemoryTodoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/repository/InMemoryTodoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,19 +33,105 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.TodoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature__hugo__v2&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pc/Desktop/todo&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TodoApplication.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldNotFailWhenDeletingUngknowId.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldSetCreatedAtAndUpdatedAt.executor": "Run",
+    "JUnit.TodoServiceTest.shouldFindExistingTodo.executor": "Run",
+    "JUnit.TodoServiceTest.shouldListTodosInService.executor": "Run",
+    "JUnit.TodoServiceTest.shouldNotFailWhenDeletingUngknowId.executor": "Run",
+    "JUnit.TodoServiceTest.shouldSetCreatedAtAndUpdatedAt.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature__hugo__v2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pc/Desktop/todo"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="JUnit.TodoServiceTest.shouldUpdateTodoInService">
+    <configuration name="TodoServiceTest.shouldFindExistingTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.usecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
+      <option name="METHOD_NAME" value="shouldFindExistingTodo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.shouldListTodosInService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.usecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
+      <option name="METHOD_NAME" value="shouldListTodosInService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.shouldNotFailWhenDeletingUngknowId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.usecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotFailWhenDeletingUngknowId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.shouldSetCreatedAtAndUpdatedAt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
+      <option name="METHOD_NAME" value="shouldSetCreatedAtAndUpdatedAt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.shouldUpdateTodoInService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.usecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
+      <option name="METHOD_NAME" value="shouldUpdateTodoInService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="todo" />
       <method v="2">
@@ -51,6 +143,15 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TodoServiceTest.shouldUpdateTodoInService" />
+        <item itemvalue="JUnit.TodoServiceTest.shouldListTodosInService" />
+        <item itemvalue="JUnit.TodoServiceTest.shouldFindExistingTodo" />
+        <item itemvalue="JUnit.TodoServiceTest.shouldNotFailWhenDeletingUngknowId" />
+        <item itemvalue="JUnit.TodoServiceTest.shouldSetCreatedAtAndUpdatedAt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
