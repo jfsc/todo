@@ -13,11 +13,11 @@ public class TodoResponse {
     private Instant createdAt;
     private Instant updatedAt;
 
-    public static TodoResponse from(Todo t) {
-        TodoResponse r = new TodoResponse();
-        r.id = t.getId(); r.title = t.getTitle(); r.description = t.getDescription();
-        r.done = t.isDone(); r.createdAt = t.getCreatedAt(); r.updatedAt = t.getUpdatedAt();
-        return r;
+    public static TodoResponse from(Todo todo) {
+        TodoResponse response = new TodoResponse();
+        response.id = todo.getId(); response.title = todo.getTitle(); response.description = todo.getDescription();
+        response.done = todo.isDone(); response.createdAt = todo.getCreatedAt(); response.updatedAt = todo.getUpdatedAt();
+        return response;
     }
 
     public UUID getId() { return id; }
