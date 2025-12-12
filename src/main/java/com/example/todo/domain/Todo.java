@@ -1,6 +1,7 @@
 package com.example.todo.domain;
 
 import java.time.Instant;
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 public class Todo {
@@ -8,8 +9,8 @@ public class Todo {
     private String title;
     private String description;
     private boolean done;
-    private Instant createdAt;
-    private Instant updatedAt;
+    private OffsetDateTime createdAt;
+    private OffsetDateTime updatedAt;
 
     // Full Construtor
     public Todo(UUID id, String title, String description, boolean done) {
@@ -48,8 +49,8 @@ public class Todo {
     public void setDescription(String description) { this.description = description; }
     public boolean isDone() { return done; }
     public void setDone(boolean done) { this.done = done; }
-    public Instant getCreatedAt() { return createdAt; }
-    public void setCreatedAt(Instant createdAt) { this.createdAt = createdAt; }
-    public Instant getUpdatedAt() { return updatedAt; }
-    public void setUpdatedAt(Instant updatedAt) { this.updatedAt = updatedAt; }
+    public OffsetDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(OffsetDateTime createdAt) { this.createdAt = createdAt; }
+    public OffsetDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(OffsetDateTime updatedAt) { this.updatedAt = updatedAt; }
 }

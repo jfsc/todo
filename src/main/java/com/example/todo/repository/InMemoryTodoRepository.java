@@ -4,6 +4,8 @@ import com.example.todo.domain.Todo;
 import org.springframework.stereotype.Repository;
 
 import java.time.Instant;
+import java.time.OffsetDateTime;
+import java.time.ZoneId;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
@@ -14,7 +16,7 @@ public class InMemoryTodoRepository {
 
     public Todo save(Todo todo) {
         if (todo.getId() == null) todo.setId(UUID.randomUUID());
-        Instant now = Instant.now();
+        OffsetDateTime now = OffsetDateTime.now(ZoneId.of("America/Sao_Paulo"));
         if (todo.getCreatedAt() == null) todo.setCreatedAt(now);
         todo.setUpdatedAt(now);
         store.put(todo.getId(), todo);

@@ -3,6 +3,7 @@ package com.example.todo.dto;
 import com.example.todo.domain.Todo;
 
 import java.time.Instant;
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 public class TodoResponse {
@@ -10,8 +11,8 @@ public class TodoResponse {
     private String title;
     private String description;
     private boolean done;
-    private Instant createdAt;
-    private Instant updatedAt;
+    private OffsetDateTime createdAt;
+    private OffsetDateTime updatedAt;
 
     public static TodoResponse from(Todo t) {
         TodoResponse r = new TodoResponse();
@@ -24,6 +25,6 @@ public class TodoResponse {
     public String getTitle() { return title; }
     public String getDescription() { return description; }
     public boolean isDone() { return done; }
-    public Instant getCreatedAt() { return createdAt; }
-    public Instant getUpdatedAt() { return updatedAt; }
+    public OffsetDateTime getCreatedAt() { return createdAt; }
+    public OffsetDateTime getUpdatedAt() { return updatedAt; }
 }
