@@ -25,14 +25,14 @@ public class Todo {
         this.description = "";
         this.done = false;
     }
-    // Construtor without
+    // Construtor with title, description and done=false
     public Todo(String title, String description) {
         this.id = UUID.randomUUID();
         this.title = title;
         this.description = description;
         this.done = false;
     }
-    // Other Construtor
+    // Construtor with id, title, done and description empty
     public Todo(UUID id, String title, boolean done) {
         this.id = id;
         this.title = title;
