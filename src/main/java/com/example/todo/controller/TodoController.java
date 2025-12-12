@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import jakarta.validation.Valid;  // <-- CORRETO
+import jakarta.validation.Valid;
 
 import java.net.URI;
 import java.util.List;

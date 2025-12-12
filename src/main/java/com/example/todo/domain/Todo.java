@@ -11,12 +11,16 @@ public class Todo {
     private Instant createdAt;
     private Instant updatedAt;
 
-        // Full Construtor
     public Todo(UUID id, String title, String description, boolean done) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.done = done;
+
+        // Permite instanciar classes com titulo vazio. CORREÇAO:
+        // if (title == null || title.trim().isEmpty()) {
+        //     throw new IllegalArgumentException("Titulo nao pode ser vazio ou nulo");
+        // }
     }
 
     public Todo() {
@@ -25,14 +29,14 @@ public class Todo {
         this.description = "";
         this.done = false;
     }
-    // Construtor without
+
     public Todo(String title, String description) {
         this.id = UUID.randomUUID();
         this.title = title;
         this.description = description;
         this.done = false;
     }
-    // Other Construtor
+
     public Todo(UUID id, String title, boolean done) {
         this.id = id;
         this.title = title;
