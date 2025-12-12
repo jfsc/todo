@@ -29,6 +29,22 @@ class InMemoryTodoRepositoryTest {
         assertEquals("Test", found.get().getTitle());
     }
 
+    @Test
+    void shouldGenerateIdWhenSavingTodoWithoutId() {
+        Todo todo = new Todo(null, "Title", "Desc", false);
+
+        Todo saved = repository.save(todo);
+
+        assertNotNull(saved.getId());
+        assertNotNull(saved.getCreatedAt());
+        assertNotNull(saved.getUpdatedAt());
+    }
+
+    @Test
+    void shouldReturnEmptyWhenTodoNotFound() {
+        Optional<Todo> result = repository.findById(UUID.randomUUID());
+        assertTrue(result.isEmpty());
+    }
 
     @Test
     void shouldListTodos() {
@@ -74,5 +90,4 @@ class InMemoryTodoRepositoryTest {
         Optional<Todo> found = repository.findById(todo.getId());
         assertTrue(found.isEmpty());
     }
-
 }
