@@ -4,6 +4,7 @@ import com.example.todo.domain.Todo;
 import com.example.todo.repository.InMemoryTodoRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -30,9 +31,12 @@ public class TodoService {
 
     public Todo update(UUID id, Todo update) {
         Todo existing = repo.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
+
         existing.setTitle(update.getTitle());
         existing.setDescription(update.getDescription());
         existing.setDone(update.isDone());
+        existing.setUpdatedAt(Instant.now());
+
         return repo.save(existing);
     }
 
