@@ -43,6 +43,38 @@ class TodoControllerTest {
     }
 
     @Test
+    void shouldCreateTodo(){
+        TodoRequest request = new TodoRequest();
+        request.setTitle("New Title");
+        request.setDescription("New Desc");
+        request.setDone(false);
+
+        Todo created = new Todo(UUID.randomUUID(), request.getTitle(), request.getDescription(), request.isDone());
+
+        when(service.create(ArgumentMatchers.any(Todo.class))).thenReturn(created);
+
+        ResponseEntity<TodoResponse> responseEntity = controller.create(request);
+
+        assertNotNull(responseEntity);
+        assertEquals(201, responseEntity.getStatusCodeValue());
+        assertNotNull(responseEntity.getBody());
+        assertEquals(created.getId(), responseEntity.getBody().getId());
+        verify(service, times(1)).create(ArgumentMatchers.any(Todo.class));
+    }
+
+
+    @Test
+    void shouldGetNotFound() {
+        UUID id = UUID.randomUUID();
+
+        when(service.find(id)).thenReturn(Optional.empty());
+
+        RuntimeException ex = assertThrows(RuntimeException.class, () -> controller.get(id));
+        assertEquals("Not found", ex.getMessage());
+        verify(service, times(1)).find(id);
+    }
+
+    @Test
     void shouldUpdateTodo() {
         UUID id = UUID.randomUUID();
         TodoRequest request = new TodoRequest();
