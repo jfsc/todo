@@ -19,7 +19,7 @@ public class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
         try {
-            Resource res = new ClassPathResource("confd_spring/app_config.toml");
+            Resource res = getResource(); // usa método protegido
             if (!res.exists()) {
                 System.out.println("TOML config not found: confd_spring/app_config.toml");
                 return;
@@ -37,5 +37,12 @@ public class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
         } catch (Exception e) {
             System.err.println("Failed to load TOML config: " + e.getMessage());
         }
+    }
+
+    /**
+     * Método protegido para facilitar testes. Pode ser sobrescrito em testes.
+     */
+    protected Resource getResource() {
+        return new ClassPathResource("confd_spring/app_config.toml");
     }
 }

@@ -13,7 +13,7 @@ public class InMemoryTodoRepository {
     private final Map<UUID, Todo> store = new ConcurrentHashMap<>();
 
     public Todo save(Todo todo) {
-        if (todo.getId() == null) todo.setId(UUID.randomUUID());
+        if (todo.getId() == null) {todo.setId(UUID.randomUUID()); }
         Instant now = Instant.now();
         if (todo.getCreatedAt() == null) todo.setCreatedAt(now);
         todo.setUpdatedAt(now);

@@ -14,6 +14,8 @@ public class TodoResponse {
     private Instant updatedAt;
 
     public static TodoResponse from(Todo t) {
+        if (t == null) return null; // Tratando erro nulo
+
         TodoResponse r = new TodoResponse();
         r.id = t.getId(); r.title = t.getTitle(); r.description = t.getDescription();
         r.done = t.isDone(); r.createdAt = t.getCreatedAt(); r.updatedAt = t.getUpdatedAt();
