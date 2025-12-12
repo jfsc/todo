@@ -1,6 +1,8 @@
 package com.example.todo.repository;
 
 import com.example.todo.domain.Todo;
+import com.example.todo.exception.IdNullException;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,6 +19,14 @@ class InMemoryTodoRepositoryTest {
     @BeforeEach
     void setup() {
         repository = new InMemoryTodoRepository();
+    }
+
+    @Test
+    void shouldNotFindTodoWithNullId() {
+
+        assertThrows(IdNullException.class, () -> {
+            repository.findById(null);
+        });
     }
 
     @Test
@@ -76,4 +86,33 @@ class InMemoryTodoRepositoryTest {
         Optional<Todo> found = repository.findById(todo.getId());
         assertTrue(found.isEmpty());
     }
+
+    @Test
+    void shouldGenerateRandomIdWhenIdIsNull() {
+        Todo todo = new Todo(null, "Title", "Description", false);
+        assertNull(todo.getId());
+
+        Todo saved = repository.save(todo);
+
+        assertNotNull(saved.getId());
+
+        Optional<Todo> found = repository.findById(saved.getId());
+        assertTrue(found.isPresent());
+        assertEquals(saved.getId(), found.get().getId());
+
+    }
+
+    @Test
+    void shouldGenerateDifferentIdsForDifferentTodosWithNullId() {
+        Todo todo1 = new Todo(null, "Task 1", "Desc 1", false);
+        Todo todo2 = new Todo(null, "Task 2", "Desc 2", false);
+
+        repository.save(todo1);
+        repository.save(todo2);
+
+        assertNotNull(todo1.getId());
+        assertNotNull(todo2.getId());
+        assertNotEquals(todo1.getId(), todo2.getId());
+    }
+
 }
