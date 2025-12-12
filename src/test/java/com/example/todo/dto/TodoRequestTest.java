@@ -1,18 +1,24 @@
 package com.example.todo.dto;
 
 import com.example.todo.domain.Todo;
+import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest
 public class TodoRequestTest {
 
     @Autowired
-    private static Validator validator;
+    private Validator validator;
 
     @Test
     void toDomain_shouldMapCorrectly(){
@@ -29,6 +35,15 @@ public class TodoRequestTest {
     }
 
     @Test
-    void
+    void shouldFailInValidationWhenTitleIsBlank(){
+        TodoRequest req = new TodoRequest();
+        req.setTitle("");
+        req.setDescription("test");
+        req.setDone(true);
+
+        Set<ConstraintViolation<TodoRequest>> violations = validator.validate(req);
+
+        assertFalse(violations.isEmpty(), "Spring validator should alert empty title");
+    }
 
 }
