@@ -40,7 +40,7 @@ public class TodoController {
     }
 
     @GetMapping("/{id}")
-    public TodoResponse get(@PathVariable UUID id) {
+    public TodoResponse get(@PathVariable ("id")  UUID id) {
         return service.find(id).map(TodoResponse::from)
                 .orElseThrow(() -> new RuntimeException("Not found"));
     }
