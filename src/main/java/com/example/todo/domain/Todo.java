@@ -11,7 +11,7 @@ public class Todo {
     private Instant createdAt;
     private Instant updatedAt;
 
-        // Full Construtor
+    // Full Construtor
     public Todo(UUID id, String title, String description, boolean done) {
         this.id = id;
         this.title = title;
