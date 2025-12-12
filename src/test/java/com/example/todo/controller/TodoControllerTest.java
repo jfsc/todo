@@ -101,12 +101,19 @@ class TodoControllerTest {
     }
 
     @Test
-    void delete() {
+    void delete_shouldNotFoundEntity() {
         TodoRequest req = new TodoRequest();
         req.setTitle("test");
         req.setDescription("test");
         req.setDone(false);
 
+        ResponseEntity<TodoResponse> created = controller.create(req);
+        assertNotNull(created);
+        assertNotNull(created.getBody());
 
+        controller.delete(created.getBody().getId());
+        assertThrows(RuntimeException.class, () -> {
+            controller.get(created.getBody().getId());
+        });
     }
 }
