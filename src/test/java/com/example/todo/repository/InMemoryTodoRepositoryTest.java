@@ -38,6 +38,22 @@ class InMemoryTodoRepositoryTest {
         assertTrue(found.isPresent());
 
     }
+    @Test
+    void shouldCreateTodoOnlyWith_TitleAndDescription() {
+        Todo todoNull = new Todo( "Title", "TitleTitoso");
+        repository.save(todoNull);
+        Optional<Todo> found = repository.findById(todoNull.getId());
+        assertTrue(found.isPresent());
+
+    }
+    @Test
+    void shouldCreateTodoOnlyWith_IdTitleDone_DescriptionEmpty() {
+        Todo todoNull = new Todo( UUID.randomUUID(),"Title", false);
+        repository.save(todoNull);
+        Optional<Todo> found = repository.findById(todoNull.getId());
+        assertTrue(found.isPresent());
+
+    }
 
     @Test
     void shouldListTodos() {
@@ -92,6 +108,8 @@ class InMemoryTodoRepositoryTest {
         assertTrue(updated.get().isDone());
 
   }
+
+
 
     @Test
     void shouldDeleteTodo() {
