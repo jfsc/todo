@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="feat: fix DELETE endpoint behavior and increase test coverage to 88%&#10;&#10;Fixed the DELETE endpoint by returning a ResponseEntity with HTTP 204 (No Content),&#10;ensuring proper and consistent behavior during resource deletion.&#10;&#10;Additionally, improved overall test coverage to 88% across controllers, services,&#10;and repositories, adding new unit and integration tests to validate core flows.">
+    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="feat: fix DELETE endpoint behavior and increase test coverage to 88%&#10;&#10;Fixed the DELETE endpoint by returning a ResponseEntity with HTTP 204 (No Content),&#10;ensuring proper and consistent behavior during resource deletion.&#10;&#10;Additionally, improved overall test coverage to 89% across controllers, services,&#10;and repositories, adding new unit and integration tests to validate core flows.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/Domain/TodoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/Repository/InMemoryTodoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/Repository/InMemoryTodoRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,7 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InMemoryTodoRepositoryTest">
+  <component name="RunManager" selected="JUnit.com.example.todo.repository in todo-openapi-spring3">
     <configuration name="All in todo-openapi-spring3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <option name="PACKAGE_NAME" value="" />
@@ -154,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.example.todo.repository in todo-openapi-spring3" />
         <item itemvalue="JUnit.InMemoryTodoRepositoryTest" />
         <item itemvalue="JUnit.InMemoryTodoRepositoryTest (1)" />
         <item itemvalue="JUnit.All in todo-openapi-spring3" />
         <item itemvalue="JUnit.TodoControllerTest.shouldUpdateTodoAndReturn200" />
-        <item itemvalue="JUnit.com.example.todo.repository in todo-openapi-spring3" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765562880245</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: fix DELETE endpoint behavior and increase test coverage to 88%&#10;&#10;Fixed the DELETE endpoint by returning a ResponseEntity with HTTP 204 (No Content),&#10;ensuring proper and consistent behavior during resource deletion.&#10;&#10;Additionally, improved overall test coverage to 89% across controllers, services,&#10;and repositories, adding new unit and integration tests to validate core flows.">
+      <option name="closed" value="true" />
+      <created>1765564628938</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765564628938</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +237,7 @@
     <MESSAGE value="add teste case" />
     <MESSAGE value="Fixed a bug where the GET, PUT, and DELETE endpoints were not correctly binding the path variable due to the missing @PathVariable(&quot;id&quot;) annotation. This update ensures proper request handling and prevents runtime errors." />
     <MESSAGE value="feat: fix DELETE endpoint behavior and increase test coverage to 88%&#10;&#10;Fixed the DELETE endpoint by returning a ResponseEntity with HTTP 204 (No Content),&#10;ensuring proper and consistent behavior during resource deletion.&#10;&#10;Additionally, improved overall test coverage to 88% across controllers, services,&#10;and repositories, adding new unit and integration tests to validate core flows." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: fix DELETE endpoint behavior and increase test coverage to 88%&#10;&#10;Fixed the DELETE endpoint by returning a ResponseEntity with HTTP 204 (No Content),&#10;ensuring proper and consistent behavior during resource deletion.&#10;&#10;Additionally, improved overall test coverage to 88% across controllers, services,&#10;and repositories, adding new unit and integration tests to validate core flows." />
+    <MESSAGE value="feat: fix DELETE endpoint behavior and increase test coverage to 88%&#10;&#10;Fixed the DELETE endpoint by returning a ResponseEntity with HTTP 204 (No Content),&#10;ensuring proper and consistent behavior during resource deletion.&#10;&#10;Additionally, improved overall test coverage to 89% across controllers, services,&#10;and repositories, adding new unit and integration tests to validate core flows." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: fix DELETE endpoint behavior and increase test coverage to 88%&#10;&#10;Fixed the DELETE endpoint by returning a ResponseEntity with HTTP 204 (No Content),&#10;ensuring proper and consistent behavior during resource deletion.&#10;&#10;Additionally, improved overall test coverage to 89% across controllers, services,&#10;and repositories, adding new unit and integration tests to validate core flows." />
   </component>
 </project>
