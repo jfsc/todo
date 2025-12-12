@@ -92,4 +92,22 @@ class TomlEnvironmentPostProcessorTest {
                 processor.postProcessEnvironment(env, new SpringApplication())
         );
     }
+
+    @Test
+    void shouldLoadEmptyTomlWithoutErrors() {
+        ConfigurableEnvironment env = new StandardEnvironment();
+
+        TomlEnvironmentPostProcessor.setOverrideResource(
+                new FakeResource("", true)
+        );
+
+        assertDoesNotThrow(() ->
+                processor.postProcessEnvironment(env, new SpringApplication())
+        );
+
+        assertTrue(env.getPropertySources().contains("tomlPropertySource"));
+        assertTrue(((MapPropertySource) env.getPropertySources().get("tomlPropertySource"))
+                .getSource().isEmpty());
+    }
+
 }
