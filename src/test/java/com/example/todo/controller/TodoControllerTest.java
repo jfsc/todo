@@ -64,6 +64,16 @@ class TodoControllerTest {
 
     @Test
     void get() {
+        TodoRequest req = new TodoRequest();
+        req.setTitle("test");
+        req.setDescription("test");
+        req.setDone(false);
+
+        ResponseEntity<TodoResponse> created = controller.create(req);
+
+        TodoResponse found = controller.get(created.getBody().getId());
+        assertNotNull(found);
+        assertEquals("test", found.getTitle());
     }
 
     @Test
