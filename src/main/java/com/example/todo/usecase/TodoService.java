@@ -1,7 +1,7 @@
 package com.example.todo.usecase;
 
 import com.example.todo.domain.Todo;
-import com.example.todo.repository.InMemoryTodoRepository;
+import com.example.todo.InMemoryTodoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

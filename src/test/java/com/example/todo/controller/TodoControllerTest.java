@@ -1,8 +1,6 @@
-package com.example.todo.repository;
+package com.example.todo.controller;
 
-import com.example.todo.controller.TodoController;
 import com.example.todo.domain.Todo;
-import com.example.todo.dto.TodoRequest;
 import com.example.todo.usecase.TodoService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

@@ -2,6 +2,7 @@ package com.example.todo.repository;
 
 import com.example.todo.domain.Todo;
 import com.example.todo.exception.GlobalExceptionHandler;
+import com.example.todo.InMemoryTodoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;

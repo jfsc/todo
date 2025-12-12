@@ -1,7 +1,7 @@
-package com.example.todo.repository;
+package com.example.todo.usecase;
 
+import com.example.todo.InMemoryTodoRepository;
 import com.example.todo.domain.Todo;
-import com.example.todo.usecase.TodoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

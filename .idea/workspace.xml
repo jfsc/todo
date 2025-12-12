@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="Adding more unit tests, increasing from 50% to 66%." />
+    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="Merge remote-tracking branch 'origin/feature_jonnatan_v2' into feature_jonnatan_v2&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/repository/InMemoryTodoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/InMemoryTodoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/usecase/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/usecase/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/TodoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/TodoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="develop" />
@@ -31,12 +39,12 @@
     &quot;assignee&quot;: &quot;vinileal12&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jfsc/todo.git",
-    "accountId": "a1a21299-ffdd-480b-9655-4e1f6cfb1a15"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jfsc/todo.git&quot;,
+    &quot;accountId&quot;: &quot;a1a21299-ffdd-480b-9655-4e1f6cfb1a15&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -66,6 +74,7 @@
     "JUnit.InMemoryTodoRepositoryTest.testValidationValid.executor": "Run",
     "JUnit.TodoControllerTest.shouldCreateTodo.executor": "Run",
     "JUnit.TodoControllerTest.shouldDeleteTodo.executor": "Run",
+    "JUnit.TodoControllerTest.shouldFailValidationOnCreate.executor": "Run",
     "JUnit.TodoControllerTest.shouldGetTodo.executor": "Run",
     "JUnit.TodoControllerTest.shouldListTodos.executor": "Run",
     "JUnit.TodoControllerTest.shouldReturn404WhenTodoNotFound.executor": "Run",
@@ -94,12 +103,12 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TodoServiceTest.testDelete">
+  <component name="RunManager">
     <configuration name="TodoControllerTest.shouldDeleteTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="PATTERN" value="com.example.todo.repository.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,11 +120,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TodoControllerTest.shouldFailValidationOnCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.TodoControllerTest" />
+      <option name="METHOD_NAME" value="shouldFailValidationOnCreate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoControllerTest.shouldGetTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="PATTERN" value="com.example.todo.repository.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,27 +152,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoControllerTest.shouldReturn404WhenTodoNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-openapi-spring3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todo.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.TodoControllerTest" />
-      <option name="METHOD_NAME" value="shouldReturn404WhenTodoNotFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TodoControllerTest.shouldUpdateTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="PATTERN" value="com.example.todo.repository.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,7 +172,7 @@
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="PATTERN" value="com.example.todo.repository.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TodoControllerTest.shouldGetTodo" />
+        <item itemvalue="JUnit.TodoControllerTest.shouldFailValidationOnCreate" />
         <item itemvalue="JUnit.TodoServiceTest.testDelete" />
         <item itemvalue="JUnit.TodoControllerTest.shouldDeleteTodo" />
         <item itemvalue="JUnit.TodoControllerTest.shouldUpdateTodo" />
-        <item itemvalue="JUnit.TodoControllerTest.shouldReturn404WhenTodoNotFound" />
-        <item itemvalue="JUnit.TodoControllerTest.shouldGetTodo" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +220,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765558222510</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed 1 bug in @PathVariable(&quot;id&quot;) which was not including the &quot;Id&quot; in the get, put, and delete methods; corrected the test coverage to 94%.">
+      <option name="closed" value="true" />
+      <created>1765558268450</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765558268450</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/feature_jonnatan_v2' into feature_jonnatan_v2&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java">
+      <option name="closed" value="true" />
+      <created>1765558324704</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765558324704</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,8 +251,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed 1 bug in @PathVariable(&quot;id&quot;) which was not including the &quot;Id&quot; in the get, put, and delete methods; corrected the test coverage to 94%." />
     <MESSAGE value="Adding more unit tests, increasing from 50% to 66%." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding more unit tests, increasing from 50% to 66%." />
+    <MESSAGE value="Fixed 1 bug in @PathVariable(&quot;id&quot;) which was not including the &quot;Id&quot; in the get, put, and delete methods; corrected the test coverage to 94%." />
+    <MESSAGE value="Merge remote-tracking branch 'origin/feature_jonnatan_v2' into feature_jonnatan_v2&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/feature_jonnatan_v2' into feature_jonnatan_v2&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" />
   </component>
 </project>
