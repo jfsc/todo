@@ -46,13 +46,14 @@ public class TodoController {
     }
 
     @PutMapping("/{id}")
-    public TodoResponse update(@PathVariable UUID id, @Valid @RequestBody TodoRequest req) {
+    public TodoResponse update(@PathVariable ("id") UUID id, @Valid @RequestBody TodoRequest req) {
         return TodoResponse.from(service.update(id, req.toDomain()));
     }
 
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable UUID id) {
+    public ResponseEntity<Void> delete(@PathVariable ("id") UUID id) {
         service.delete(id);
+        return ResponseEntity.noContent().build();
+
     }
 }
