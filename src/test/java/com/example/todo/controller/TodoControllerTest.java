@@ -78,9 +78,35 @@ class TodoControllerTest {
 
     @Test
     void update() {
+        TodoRequest req = new TodoRequest();
+        req.setTitle("test");
+        req.setDescription("test");
+        req.setDone(false);
+
+        ResponseEntity<TodoResponse> created = controller.create(req);
+        assertNotNull(created);
+        assertNotNull(created.getBody());
+
+      TodoRequest update = new TodoRequest();
+      update.setTitle("test update");
+        update.setDescription("test updated");
+        update.setDone(true);
+
+        TodoResponse updated = controller.update(created.getBody().getId(), update);
+        assertEquals("test update", updated.getTitle());
+        assertEquals("test updated", updated.getDescription());
+        assertTrue(updated.isDone());
+
+
     }
 
     @Test
     void delete() {
+        TodoRequest req = new TodoRequest();
+        req.setTitle("test");
+        req.setDescription("test");
+        req.setDone(false);
+
+
     }
 }
