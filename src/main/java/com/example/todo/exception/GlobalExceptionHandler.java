@@ -7,18 +7,38 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.time.Instant;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+    // 404 - Recurso não encontrado
+    @ExceptionHandler(NoSuchElementException.class)
+    public ResponseEntity<Map<String, Object>> handleNotFound(NoSuchElementException ex) {
+        return buildResponse(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
+    // 400 - Erro de validação ou argumento inválido
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<Map<String, Object>> handleBadRequest(IllegalArgumentException ex) {
+        return buildResponse(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    // 500 - Erros inesperados
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Map<String, Object>> handleRuntime(RuntimeException ex) {
-        Map<String,Object> body = Map.of(
-            "type", "about:blank",
-            "title", ex.getMessage(),
-            "status", 404,
-            "timestamp", Instant.now().toString()
+        return buildResponse("Erro interno do servidor", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    // Método auxiliar para criar os responses
+    private ResponseEntity<Map<String, Object>> buildResponse(String message, HttpStatus status) {
+        Map<String, Object> body = Map.of(
+                "type", "about:blank",
+                "title", message,
+                "status", status.value(),
+                "timestamp", Instant.now().toString()
         );
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
+
+        return ResponseEntity.status(status).body(body);
     }
 }
