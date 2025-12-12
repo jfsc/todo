@@ -31,7 +31,21 @@ class TodoControllerTest {
 
     @Test
     void list() {
-      
+        TodoRequest req = new TodoRequest();
+        req.setTitle("test");
+        req.setDescription("test");
+        req.setDone(false);
+
+        TodoRequest req2 = new TodoRequest();
+        req2.setTitle("test2");
+        req2.setDescription("test2");
+        req2.setDone(true);
+
+        ResponseEntity<TodoResponse> created = controller.create(req);
+        ResponseEntity<TodoResponse> created2 = controller.create(req2);
+
+        List<TodoResponse> resultsFound = controller.list();
+        assertEquals(2, resultsFound.size());
     }
 
     @Test
