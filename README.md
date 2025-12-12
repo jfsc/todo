@@ -97,38 +97,9 @@ This project is licensed under the **MIT License**.
 
 ## Contributors
 
-gigliarly.gonzaga@outlook.com (Chevette Tubarão eh o carro de Macho) - commitando na branch develop
-
-aldocandeia000@gmail.com
-
-jonnattanfarias@gmail.com
-
-Email de giordanni: giordanniformiga103@gmail.com
-
-cauanynunes00@gmail.com
-
-gabrielseixas1@gmail.com [ESTOU COMMITANDO NA BRANCH:devlopment]
-
-hbezerradev@gmail.com
-
-larry_diego@hotmail.com
-
-Estou comentando na branch develop (Hugo)
-
-Estou comentando na branch develop (Aldo)
-
-Estou comentando na branch develop (Larry)
-
-jonnattanfarias@gmail.com está comitando na develop
-
-brunacsnn@gmail.com está comitando na develop
-
-samuel.marcos.smh@gmail.com está comitando na develop
-
-cauanynunes00@gmail.com está comitando na develop
-
-viniciusleal952@gmail.com esta comintando na davelop
-
-leonardoag1506@gmail.com está comitando na develop
-
 Eu fernandofrancafilho8@gmail.com estou commitando na branch feature_fernando_v2
+
+Erros encontrados: problema no ID na parte do Controller, e tratamento de excessões na parte do GlobaExceptionHandler
+
+Testes com acurácia acima de 80%, e boas práticas implementadas.
+
