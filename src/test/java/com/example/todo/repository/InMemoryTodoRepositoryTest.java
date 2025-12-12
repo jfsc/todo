@@ -1,11 +1,9 @@
 package com.example.todo.repository;
 
 import com.example.todo.domain.Todo;
-import com.example.todo.usecase.TodoService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
@@ -39,7 +37,7 @@ class InMemoryTodoRepositoryTest {
         repository.save(todo);
         
         List<Todo> foundTodos = repository.findAll();
-        assertTrue(!foundTodos.isEmpty());
+        assertFalse(foundTodos.isEmpty());
       }
 
 
@@ -70,5 +68,36 @@ class InMemoryTodoRepositoryTest {
         repository.deleteById(foundTodo.getId());
         
         assertTrue(repository.findById(todo.getId()).isEmpty());	  
+    }
+
+    @Test
+    void shouldReturnEmpty() {
+        Optional<Todo> found = repository.findById(UUID.randomUUID());
+
+        assertTrue(found.isEmpty());
+    }
+
+    @Test
+    void shouldSetTimestamps() {
+        Todo todo = new Todo(UUID.randomUUID(), "Timestamp Test", "Teste de Timestamps", false);
+        assertNull(todo.getCreatedAt());
+
+        Todo saved = repository.save(todo);
+
+        assertNotNull(saved.getCreatedAt());
+        assertNotNull(saved.getUpdatedAt());
+        assertEquals(saved.getCreatedAt(), saved.getUpdatedAt());
+    }
+
+    @Test
+    void shouldCreateUUID() {
+        Todo todo = new Todo(null, "UUID Generating Test", "Teste de Geração de UUID pelo Save", false);
+
+        assertNull(todo.getId());
+
+        Todo savedTodo = repository.save(todo);
+
+        assertNotNull(savedTodo.getId());
+        assertTrue(repository.findById(savedTodo.getId()).isPresent());
     }
 }
