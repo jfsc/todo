@@ -7,6 +7,11 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.time.Instant;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -68,4 +73,60 @@ class InMemoryTodoRepositoryTest {
         Optional<Todo> found = repository.findById(todo.getId());
         assertFalse(found.isPresent());
     }
+
+    @Test
+    void shouldGenerateIdWhenNull() {
+        Todo todo = new Todo(null, "Test", "desc", false);
+        Todo saved = repository.save(todo);
+
+        assertNotNull(saved.getId());
+    }
+
+    @Test
+    void shouldSetCreatedAtWhenNull() {
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "desc", false);
+        todo.setCreatedAt(null);
+
+        Todo saved = repository.save(todo);
+
+        assertNotNull(saved.getCreatedAt());
+    }
+
+    @Test
+    void shouldNotOverrideCreatedAt() {
+        Instant fixed = Instant.parse("2020-01-01T00:00:00Z");
+
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "desc", false);
+        todo.setCreatedAt(fixed);
+
+        Todo saved = repository.save(todo);
+
+        assertEquals(fixed, saved.getCreatedAt());
+    }
+
+    @Test
+    void shouldUpdateUpdatedAtOnSave() {
+
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "Desc", false);
+
+
+        Todo firstSave = repository.save(todo);
+        Instant updatedAt1 = firstSave.getUpdatedAt();
+
+
+        firstSave.setTitle("Updated Title");
+
+
+        Todo secondSave = repository.save(firstSave);
+        Instant updatedAt2 = secondSave.getUpdatedAt();
+
+
+        assertNotNull(updatedAt1);
+        assertNotNull(updatedAt2);
+
+
+        assertFalse(updatedAt2.isBefore(updatedAt1));
+    }
+
+
 }
