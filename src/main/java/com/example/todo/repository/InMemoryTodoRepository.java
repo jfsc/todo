@@ -23,7 +23,7 @@ public class InMemoryTodoRepository {
     }
 
     public List<Todo> findAll() {
-        return store.values().stream().collect(Collectors.toList());
+        return new ArrayList<>(store.values());
     }
 
     public void deleteById(UUID id) {
