@@ -15,15 +15,36 @@ public class TodoResponse {
 
     public static TodoResponse from(Todo t) {
         TodoResponse r = new TodoResponse();
-        r.id = t.getId(); r.title = t.getTitle(); r.description = t.getDescription();
-        r.done = t.isDone(); r.createdAt = t.getCreatedAt(); r.updatedAt = t.getUpdatedAt();
+        r.id = t.getId();
+        r.title = t.getTitle();
+        r.description = t.getDescription();
+        r.done = t.isDone();
+        r.createdAt = t.getCreatedAt();
+        r.updatedAt = t.getUpdatedAt();
         return r;
     }
 
-    public UUID getId() { return id; }
-    public String getTitle() { return title; }
-    public String getDescription() { return description; }
-    public boolean isDone() { return done; }
-    public Instant getCreatedAt() { return createdAt; }
-    public Instant getUpdatedAt() { return updatedAt; }
+    public UUID getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public Instant getUpdatedAt() {
+        return updatedAt;
+    }
 }

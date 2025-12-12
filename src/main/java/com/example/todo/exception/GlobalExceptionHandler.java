@@ -13,11 +13,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Map<String, Object>> handleRuntime(RuntimeException ex) {
-        Map<String,Object> body = Map.of(
-            "type", "about:blank",
-            "title", ex.getMessage(),
-            "status", 404,
-            "timestamp", Instant.now().toString()
+        Map<String, Object> body = Map.of(
+                "type", "about:blank",
+                "title", ex.getMessage(),
+                "status", 404,
+                "timestamp", Instant.now().toString()
         );
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
     }
