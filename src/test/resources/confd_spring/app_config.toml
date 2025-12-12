@@ -1,0 +1,2 @@
+# Test-specific TOML configuration
+test.property.from.toml="Hello from TOML test!"
