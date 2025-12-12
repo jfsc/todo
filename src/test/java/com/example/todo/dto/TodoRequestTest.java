@@ -43,7 +43,32 @@ public class TodoRequestTest {
 
         Set<ConstraintViolation<TodoRequest>> violations = validator.validate(req);
 
-        assertFalse(violations.isEmpty(), "Spring validator should alert empty title");
+        assertFalse(violations.isEmpty(), "Spring validator should alert when title is empty");
     }
+
+    @Test
+    void shouldFailInValidationWhenTitleIsNull(){
+        TodoRequest req = new TodoRequest();
+        req.setTitle(null);
+        req.setDescription("test");
+        req.setDone(true);
+
+        Set<ConstraintViolation<TodoRequest>> violations = validator.validate(req);
+
+        assertFalse(violations.isEmpty(), "Spring validator should alert when title is null");
+    }
+
+    @Test
+    void shouldPassValidationWhenTitleIsValid(){
+        TodoRequest req = new TodoRequest();
+        req.setTitle("Title");
+        req.setDescription("test");
+        req.setDone(true);
+
+        Set<ConstraintViolation<TodoRequest>> violations = validator.validate(req);
+
+        assertTrue(violations.isEmpty(), "Spring validator shouldn't alert when title is valid");
+    }
+
 
 }
