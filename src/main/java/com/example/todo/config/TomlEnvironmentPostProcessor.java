@@ -15,25 +15,31 @@ import java.util.Map;
 public class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
 
     private static final String NAME = "tomlPropertySource";
+    private static final String CONFIG_PATH = "confd_spring/app_config.toml";
 
     @Override
-    public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
-        try {
-            Resource res = new ClassPathResource("confd_spring/app_config.toml");
-            if (!res.exists()) {
-                System.out.println("TOML config not found: confd_spring/app_config.toml");
-                return;
-            }
+    public void postProcessEnvironment(ConfigurableEnvironment environment,
+                                       SpringApplication application) {
 
-            try (InputStream is = res.getInputStream()) {
-                Toml toml = new Toml().read(is);
-                Map<String, Object> map = toml.toMap();
+        Resource resource = new ClassPathResource(CONFIG_PATH);
 
-                MutablePropertySources sources = environment.getPropertySources();
-                sources.addFirst(new MapPropertySource(NAME, map));
+        // Caso 1: arquivo TOML não existe
+        if (!resource.exists()) {
+            System.out.println("TOML config not found: " + CONFIG_PATH);
+            return;
+        }
 
-                System.out.println("TOML config loaded: " + map.keySet());
-            }
+        // Caso 2: arquivo existe → tentar carregar
+        try (InputStream is = resource.getInputStream()) {
+
+            Toml toml = new Toml().read(is);
+            Map<String, Object> map = toml.toMap();
+
+            MutablePropertySources sources = environment.getPropertySources();
+            sources.addFirst(new MapPropertySource(NAME, map));
+
+            System.out.println("TOML config loaded: " + map.keySet());
+
         } catch (Exception e) {
             System.err.println("Failed to load TOML config: " + e.getMessage());
         }

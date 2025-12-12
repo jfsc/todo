@@ -5,6 +5,7 @@ import com.example.todo.repository.InMemoryTodoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -20,62 +21,92 @@ class InMemoryTodoRepositoryTest {
         repository = new InMemoryTodoRepository();
     }
 
+
     @Test
-    void shouldCreateTodo() {
+    void shouldCreateTodoWithoutId() {
+        Todo todo = new Todo();
+        todo.setTitle("No ID");
+        todo.setDescription("Test without ID");
 
-        Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
-        repository.save(todo);
+        Todo saved = repository.save(todo);
 
-        Optional<Todo> found = repository.findById(todo.getId());
+        assertNotNull(saved.getId());
+        assertNotNull(saved.getCreatedAt());
+        assertNotNull(saved.getUpdatedAt());
+    }
+
+    @Test
+    void shouldCreateTodoWithoutCreatedAt() {
+        Todo todo = new Todo();
+        todo.setId(UUID.randomUUID());
+        todo.setTitle("No createdAt");
+
+        Todo saved = repository.save(todo);
+
+        assertNotNull(saved.getCreatedAt());
+        assertNotNull(saved.getUpdatedAt());
+    }
+
+    @Test
+    void shouldUpdateTodo() {
+        Todo todo = new Todo();
+        todo.setTitle("Test");
+        Todo saved = repository.save(todo);
+
+        Instant originalCreatedAt = saved.getCreatedAt();
+
+        saved.setTitle("Updated");
+        saved.setDescription("Updated description");
+        Todo updated = repository.save(saved);
+
+        assertEquals("Updated", updated.getTitle());
+        assertEquals("Updated description", updated.getDescription());
+        assertEquals(originalCreatedAt, updated.getCreatedAt()); // createdAt must not change
+        assertNotNull(updated.getUpdatedAt());
+    }
+
+
+
+    @Test
+    void shouldFindById() {
+        Todo todo = new Todo();
+        todo.setTitle("Test");
+        Todo saved = repository.save(todo);
+
+        Optional<Todo> found = repository.findById(saved.getId());
+
         assertTrue(found.isPresent());
         assertEquals("Test", found.get().getTitle());
     }
 
     @Test
-    void shouldListTodos() {
-
-        Todo todo1 = new Todo(UUID.randomUUID(), "Test1", "teste de criacao 1", false);
-        Todo todo2 = new Todo(UUID.randomUUID(), "Test2", "teste de criacao 2", false);
-        Todo todo3 = new Todo(UUID.randomUUID(), "Test3", "teste de criacao 3", false);
-        repository.save(todo1);
-        repository.save(todo2);
-        repository.save(todo3);
-
-        List<Todo> todos = repository.findAll();
-        assertEquals(3, todos.size());
-
+    void shouldReturnEmptyWhenIdNotFound() {
+        Optional<Todo> found = repository.findById(UUID.randomUUID());
+        assertTrue(found.isEmpty());
     }
 
+
+
     @Test
-    void shouldUpdateTodo() {
+    void shouldListTodos() {
+        repository.save(new Todo());
+        repository.save(new Todo());
+        repository.save(new Todo());
 
-        Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
-        repository.save(todo);
+        List<Todo> todos = repository.findAll();
 
-        todo.setTitle("Updated Test");
-        todo.setDescription(("updated description"));
-        repository.save(todo);
+        assertEquals(3, todos.size());
+    }
 
-        Optional<Todo> found = repository.findById(todo.getId());
-        assertTrue(found.isPresent());
-        assertEquals("Updated Test", found.get().getTitle());
-        assertEquals("updated description", found.get().getDescription());
-
-
-   }
 
     @Test
     void shouldDeleteTodo() {
-
-    Todo todo = new Todo(UUID.randomUUID(), "Test", "testede criacao", false);
+        Todo todo = new Todo();
         repository.save(todo);
+
         repository.deleteById(todo.getId());
 
         Optional<Todo> found = repository.findById(todo.getId());
         assertFalse(found.isPresent());
     }
-
-
-
-
 }
