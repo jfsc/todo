@@ -11,14 +11,26 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<Map<String, Object>> handleRuntime(RuntimeException ex) {
-        Map<String,Object> body = Map.of(
-            "type", "about:blank",
-            "title", ex.getMessage(),
-            "status", 404,
-            "timestamp", Instant.now().toString()
-        );
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
-    }
+        @ExceptionHandler(RuntimeException.class)
+        public ResponseEntity<Map<String, Object>> handleRuntime(RuntimeException ex) {
+            Map<String,Object> body = Map.of(
+                "type", "about:blank",
+                "title", ex.getMessage(),
+                "status", 404,
+                "timestamp", Instant.now().toString()
+            );
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
+        }
+
+        @ExceptionHandler(IdNullException.class)
+        public ResponseEntity<Map<String, Object>> handleIdNullException(IdNullException error) {
+            HttpStatus status = HttpStatus.valueOf(error.getCode());
+            Map<String,Object> body = Map.of(
+                "type", "about:blank",
+                "title", error.getMessage(),
+                "status", status,
+                "timestamp", Instant.now().toString()
+            );
+            return ResponseEntity.status(status).body(body);
+        }
 }
