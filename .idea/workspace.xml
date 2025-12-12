@@ -57,10 +57,13 @@
     "JUnit.Testing all Test.executor": "Run",
     "JUnit.TodoControllerTest.createTodo_shouldReturnCreatedTodo_whenValidRequest.executor": "Run",
     "JUnit.TodoControllerTest.executor": "Run",
+    "JUnit.TodoControllerTest.getTodos_shouldReturnNotFound_whenServiceThrowsGenericException.executor": "Run",
     "JUnit.TodoControllerTest.updateTodo_shouldUpdatedTodo_whenReceiveIdAndBodyRequest.executor": "Run",
     "JUnit.TodoServiceTest.executor": "Run",
     "JUnit.TomlEnvironmentPostProcessorTest.executor": "Run",
+    "JUnit.TomlEnvironmentPostProcessorTest.postProcessEnvironment_shouldLoadTomlAndPrintSuccessMessage.executor": "Run",
     "JUnit.TomlEnvironmentPostProcessorTest.postProcessEnvironment_shouldLoadTomlProperties.executor": "Run",
+    "JUnit.TomlEnvironmentPostProcessorTest.shouldLoadTomlConfigWhenFileExists.executor": "Run",
     "Maven.todo-openapi-spring3 [clean,install].executor": "Run",
     "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
     "Maven.todo-openapi-spring3 [clean,site].executor": "Run",
@@ -95,13 +98,13 @@
       <command value="mvn site" />
       <command value="mvn clean site" />
       <command value="mvn package" />
-      <command value="mvn clean package" />
       <command value="mvn clean" />
       <command value="mvn test" />
       <command value="mvn clean install" />
+      <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TomlEnvironmentPostProcessorTest">
+  <component name="RunManager" selected="JUnit.Testing all Test">
     <configuration name="Testing all Test" type="JUnit" factoryName="JUnit">
       <module name="todo-openapi-spring3" />
       <option name="PACKAGE_NAME" value="com.example.todo" />
@@ -112,7 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoControllerTest.getTodos_shouldReturnNotFound_whenServiceThrowsGenericException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
@@ -122,39 +125,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.todo.controller" />
       <option name="MAIN_CLASS_NAME" value="com.example.todo.controller.TodoControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoControllerTest.updateTodo_shouldUpdatedTodo_whenReceiveIdAndBodyRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-openapi-spring3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todo.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.controller.TodoControllerTest" />
-      <option name="METHOD_NAME" value="updateTodo_shouldUpdatedTodo_whenReceiveIdAndBodyRequest" />
+      <option name="METHOD_NAME" value="getTodos_shouldReturnNotFound_whenServiceThrowsGenericException" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-openapi-spring3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todo.usecase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.usecase" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,6 +142,22 @@
       <option name="PACKAGE_NAME" value="com.example.todo.config" />
       <option name="MAIN_CLASS_NAME" value="com.example.todo.config.TomlEnvironmentPostProcessorTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TomlEnvironmentPostProcessorTest.postProcessEnvironment_shouldLoadTomlAndPrintSuccessMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.config" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.config.TomlEnvironmentPostProcessorTest" />
+      <option name="METHOD_NAME" value="postProcessEnvironment_shouldLoadTomlAndPrintSuccessMessage" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,6 +178,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TomlEnvironmentPostProcessorTest.shouldLoadTomlConfigWhenFileExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.config" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.config.TomlEnvironmentPostProcessorTest" />
+      <option name="METHOD_NAME" value="shouldLoadTomlConfigWhenFileExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.todo.TodoApplication" />
@@ -199,20 +203,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Testing all Test" />
+      <item itemvalue="JUnit.TodoControllerTest.getTodos_shouldReturnNotFound_whenServiceThrowsGenericException" />
+      <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.postProcessEnvironment_shouldLoadTomlAndPrintSuccessMessage" />
+      <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.shouldLoadTomlConfigWhenFileExists" />
       <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest" />
       <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.postProcessEnvironment_shouldLoadTomlProperties" />
-      <item itemvalue="JUnit.TodoControllerTest" />
-      <item itemvalue="JUnit.TodoControllerTest.updateTodo_shouldUpdatedTodo_whenReceiveIdAndBodyRequest" />
-      <item itemvalue="JUnit.TodoServiceTest" />
       <item itemvalue="Spring Boot.TodoApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.shouldLoadTomlConfigWhenFileExists" />
+        <item itemvalue="JUnit.TodoControllerTest.getTodos_shouldReturnNotFound_whenServiceThrowsGenericException" />
         <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest" />
+        <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.postProcessEnvironment_shouldLoadTomlAndPrintSuccessMessage" />
         <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.postProcessEnvironment_shouldLoadTomlProperties" />
-        <item itemvalue="JUnit.TodoServiceTest" />
-        <item itemvalue="JUnit.TodoControllerTest" />
-        <item itemvalue="JUnit.TodoControllerTest.updateTodo_shouldUpdatedTodo_whenReceiveIdAndBodyRequest" />
       </list>
     </recent_temporary>
   </component>
@@ -235,6 +239,7 @@
       <workItem from="1765482002323" duration="4164000" />
       <workItem from="1765502572721" duration="3152000" />
       <workItem from="1765505859440" duration="4744000" />
+      <workItem from="1765555934692" duration="6139000" />
     </task>
     <servers />
   </component>

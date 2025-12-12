@@ -15,13 +15,22 @@ import java.util.Map;
 public class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
 
     private static final String NAME = "tomlPropertySource";
+    private final String configPath;
+
+    public TomlEnvironmentPostProcessor() {
+        this.configPath = "confd_spring/app_config.toml";
+    }
+
+    public TomlEnvironmentPostProcessor(String configPath) {
+        this.configPath = configPath;
+    }
 
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
         try {
-            Resource res = new ClassPathResource("confd_spring/app_config.toml");
+            Resource res = new ClassPathResource(this.configPath);
             if (!res.exists()) {
-                System.out.println("TOML config not found: confd_spring/app_config.toml");
+                System.out.println("TOML config not found: " + this.configPath);
                 return;
             }
 

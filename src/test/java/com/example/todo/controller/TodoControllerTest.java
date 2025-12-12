@@ -154,4 +154,20 @@ class TodoControllerTest {
         resultActions.andExpect(status().isNoContent());
         verify(todoService).delete(todoId);
     }
+
+    @Test
+    void getTodos_shouldReturnNotFound_whenServiceThrowsGenericException() throws Exception {
+        // Arrange
+        String errorMessage = "Erro inesperado";
+        when(todoService.list()).thenThrow(new RuntimeException(errorMessage));
+
+        // Act
+        ResultActions resultActions = mockMvc.perform(get("/api/todos"));
+
+        // Assert
+        resultActions.andExpect(status().isNotFound());
+        resultActions.andExpect(jsonPath("$.title", is(errorMessage)));
+        resultActions.andExpect(jsonPath("$.status", is(404)));
+        verify(todoService).list();
+    }
 }
