@@ -1,7 +1,6 @@
-package com.example.todo.repository.repository;
+package com.example.todo.repository;
 
 import com.example.todo.domain.Todo;
-import com.example.todo.repository.InMemoryTodoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +9,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 
 class InMemoryTodoRepositoryTest {
 
