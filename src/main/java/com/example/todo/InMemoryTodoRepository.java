@@ -1,4 +1,4 @@
-package com.example.todo.repository;
+package com.example.todo;
 
 import com.example.todo.domain.Todo;
 import org.springframework.stereotype.Repository;

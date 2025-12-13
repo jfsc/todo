@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="">
+    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="develop" />
@@ -30,7 +39,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/jfsc/todo.git&quot;,
-    &quot;accountId&quot;: &quot;66e7dbe4-0524-4766-b176-4d59ed4ab6bc&quot;
+    &quot;accountId&quot;: &quot;a1a21299-ffdd-480b-9655-4e1f6cfb1a15&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -45,9 +54,40 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.TodoApplication.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.getterShouldReturnUpdatedAt.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.saveShouldCreateIdWhenNull.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.saveShouldNotOverwriteExistingId.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldCreateTodoUsingFirstConstructor.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldReturnUpdatedAt.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.testCreate.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.testDelete.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.testFromTodo.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.testGetters.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.testGettersAndSetters.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.testHandleRuntime.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.testToDomain.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.testValidationNotBlankTitle.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.testValidationValid.executor": "Run",
+    "JUnit.TodoControllerTest.shouldCreateTodo.executor": "Run",
+    "JUnit.TodoControllerTest.shouldDeleteTodo.executor": "Run",
+    "JUnit.TodoControllerTest.shouldFailValidationOnCreate.executor": "Run",
+    "JUnit.TodoControllerTest.shouldGetTodo.executor": "Run",
+    "JUnit.TodoControllerTest.shouldListTodos.executor": "Run",
+    "JUnit.TodoControllerTest.shouldReturn404WhenTodoNotFound.executor": "Run",
+    "JUnit.TodoControllerTest.shouldUpdateTodo.executor": "Run",
+    "JUnit.TodoServiceTest.testCreate.executor": "Run",
+    "JUnit.TodoServiceTest.testDelete (1).executor": "Run",
+    "JUnit.TodoServiceTest.testDelete.executor": "Run",
+    "JUnit.TodoServiceTest.testFind.executor": "Run",
+    "JUnit.TodoServiceTest.testList.executor": "Run",
+    "JUnit.TodoServiceTest.testUpdateNotFound.executor": "Run",
+    "JUnit.TodoServiceTest.testUpdateSuccess.executor": "Run",
+    "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature__vinicius",
+    "git-widget-placeholder": "feature__jonnatan__v2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Vinicius Leal/Documents/FACULDADE/ACCENTURE - 2025/3º FASE/projeto_10_12/todo",
@@ -57,6 +97,116 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.todo.controller" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.TodoServiceTest.testDelete_NotFound">
+    <configuration name="TodoControllerTest.shouldFailValidationOnCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.TodoControllerTest" />
+      <option name="METHOD_NAME" value="shouldFailValidationOnCreate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoControllerTest.shouldGetTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.TodoControllerTest" />
+      <option name="METHOD_NAME" value="shouldGetTodo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.testDelete (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.usecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.TodoServiceTest" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.testDelete_NotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.usecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
+      <option name="METHOD_NAME" value="testDelete_NotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TodoServiceTest.testDelete_NotFound" />
+        <item itemvalue="JUnit.TodoServiceTest.testDelete (1)" />
+        <item itemvalue="JUnit.TodoControllerTest.shouldGetTodo" />
+        <item itemvalue="JUnit.TodoControllerTest.shouldFailValidationOnCreate" />
+        <item itemvalue="JUnit.TodoServiceTest.testDelete" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,6 +216,63 @@
       <option name="presentableId" value="Default" />
       <updated>1765410829477</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adding more unit tests, increasing from 50% to 66%.">
+      <option name="closed" value="true" />
+      <created>1765558222510</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765558222510</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed 1 bug in @PathVariable(&quot;id&quot;) which was not including the &quot;Id&quot; in the get, put, and delete methods; corrected the test coverage to 94%.">
+      <option name="closed" value="true" />
+      <created>1765558268450</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765558268450</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/feature_jonnatan_v2' into feature_jonnatan_v2&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java">
+      <option name="closed" value="true" />
+      <created>1765558324704</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765558324704</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix 1° bug on @PathVariable(&quot;id&quot;) no informated methods, too fix o coverage dos tests, for  94%.">
+      <option name="closed" value="true" />
+      <created>1765559028190</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765559028190</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Corrigido 1° bugem no @PathVariable(&quot;id&quot;) e o 2° bug que foi no medo de DELETE tanto no CONTROLLER como no SERVICE , como também foi corrigido a cobertura dos testes para 94%.">
+      <option name="closed" value="true" />
+      <created>1765559969718</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765559969718</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%.">
+      <option name="closed" value="true" />
+      <created>1765560087956</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765560087956</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%.">
+      <option name="closed" value="true" />
+      <created>1765560578590</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765560578590</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,5 +285,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding more unit tests, increasing from 50% to 66%." />
+    <MESSAGE value="Fixed 1 bug in @PathVariable(&quot;id&quot;) which was not including the &quot;Id&quot; in the get, put, and delete methods; corrected the test coverage to 94%." />
+    <MESSAGE value="Merge remote-tracking branch 'origin/feature_jonnatan_v2' into feature_jonnatan_v2&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" />
+    <MESSAGE value="fix 1° bug on @PathVariable(&quot;id&quot;) no informated methods, too fix o coverage dos tests, for  94%." />
+    <MESSAGE value="Corrigido 1° bugem no @PathVariable(&quot;id&quot;) e o 2° bug que foi no medo de DELETE tanto no CONTROLLER como no SERVICE , como também foi corrigido a cobertura dos testes para 94%." />
+    <MESSAGE value="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%." />
   </component>
 </project>
