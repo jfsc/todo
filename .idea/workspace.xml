@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="fix: consertando segundo bug, que retornava o status code mesmo quando não encontrava nenhuma tarefa">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/domain/TodoTest.java" afterDir="false" />
+    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="feat: criando os teste da classe de controller">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/dto/TodoRequestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/dto/TodoResponseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +45,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="36fwFCc9SFMhOEFBX2wVx8w5rec" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,6 +63,8 @@
     "JUnit.InMemoryTodoRepositoryTest.shouldGenerateIdWhenSavingTodoWithoutId.executor": "Run",
     "JUnit.InMemoryTodoRepositoryTest.shouldListTodos.executor": "Run",
     "JUnit.InMemoryTodoRepositoryTest.shouldUpdateTodo.executor": "Run",
+    "JUnit.TodoControllerTest.executor": "Run",
+    "JUnit.TodoRequestTest.executor": "Run",
     "JUnit.TodoResponseTest.executor": "Run",
     "JUnit.TodoResponseTest.testFrom.executor": "Run",
     "JUnit.TodoTest.testDefaultConstructor.executor": "Run",
@@ -92,40 +96,53 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.todo.dto" />
       <recent name="com.example.todo.domain" />
       <recent name="com.example.todo.controller" />
-      <recent name="com.example.todo.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TodoTest.testSettersAndGetters">
-    <configuration name="TodoTest.testDefaultConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TodoResponseTest">
+    <configuration name="TodoControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.todo.domain.*" />
+          <option name="PATTERN" value="com.example.todo.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.domain.TodoTest" />
-      <option name="METHOD_NAME" value="testDefaultConstructor" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.todo.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.controller.TodoControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoTest.testFullConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.todo.domain.*" />
+          <option name="PATTERN" value="com.example.todo.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.domain.TodoTest" />
-      <option name="METHOD_NAME" value="testFullConstructor" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.todo.dto" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.dto.TodoRequestTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoResponseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.dto" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.dto.TodoResponseTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,29 +179,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoTest.testTitleDescriptionConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-openapi-spring3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todo.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.domain.TodoTest" />
-      <option name="METHOD_NAME" value="testTitleDescriptionConstructor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TodoResponseTest" />
+        <item itemvalue="JUnit.TodoRequestTest" />
+        <item itemvalue="JUnit.TodoControllerTest" />
         <item itemvalue="JUnit.TodoTest.testSettersAndGetters" />
         <item itemvalue="JUnit.TodoTest.testIdTitleDoneConstructor" />
-        <item itemvalue="JUnit.TodoTest.testTitleDescriptionConstructor" />
-        <item itemvalue="JUnit.TodoTest.testFullConstructor" />
-        <item itemvalue="JUnit.TodoTest.testDefaultConstructor" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +230,39 @@
       <option name="project" value="LOCAL" />
       <updated>1765585004887</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: criando teste de unidade para a classe de dominio do todo">
+      <option name="closed" value="true" />
+      <created>1765585839279</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765585839279</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: organizando a estrutura dos testes de dominio">
+      <option name="closed" value="true" />
+      <created>1765585892307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765585892307</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: consertando workspace.xml">
+      <option name="closed" value="true" />
+      <created>1765585935414</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765585935414</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: criando os teste da classe de controller">
+      <option name="closed" value="true" />
+      <created>1765586335643</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765586335643</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +281,11 @@
     <MESSAGE value="feat: creating test from domain Todo" />
     <MESSAGE value="fix: Consertando bug ao tentar ler um id no path varieble. passando o id no pathvarieble da forma correta" />
     <MESSAGE value="fix: consertando segundo bug, que retornava o status code mesmo quando não encontrava nenhuma tarefa" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: consertando segundo bug, que retornava o status code mesmo quando não encontrava nenhuma tarefa" />
+    <MESSAGE value="feat: criando teste de unidade para a classe de dominio do todo" />
+    <MESSAGE value="feat: organizando a estrutura dos testes de dominio" />
+    <MESSAGE value="fix: consertando workspace.xml" />
+    <MESSAGE value="feat: criando os teste da classe de controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: criando os teste da classe de controller" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
