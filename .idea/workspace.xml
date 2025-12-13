@@ -101,7 +101,7 @@
       <recent name="com.example.todo.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TodoResponseTest">
+  <component name="RunManager" selected="JUnit.TodoServiceTest">
     <configuration name="TodoControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
@@ -147,18 +147,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoTest.testIdTitleDoneConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.todo.domain.*" />
+          <option name="PATTERN" value="com.example.todo.usecase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.domain.TodoTest" />
-      <option name="METHOD_NAME" value="testIdTitleDoneConstructor" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.todo.usecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.usecase.TodoServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TodoServiceTest" />
         <item itemvalue="JUnit.TodoResponseTest" />
         <item itemvalue="JUnit.TodoRequestTest" />
         <item itemvalue="JUnit.TodoControllerTest" />
         <item itemvalue="JUnit.TodoTest.testSettersAndGetters" />
-        <item itemvalue="JUnit.TodoTest.testIdTitleDoneConstructor" />
       </list>
     </recent_temporary>
   </component>
