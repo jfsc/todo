@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="feat: criando os teste da classe de controller">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/dto/TodoRequestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/dto/TodoResponseTest.java" afterDir="false" />
+    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="feat: criando os teste da classe de services">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/config/TomlEnvironmentPostProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todo/config/TomlEnvironmentPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todo/config/TomlEnvironmentPostProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +67,13 @@
     "JUnit.TodoRequestTest.executor": "Run",
     "JUnit.TodoResponseTest.executor": "Run",
     "JUnit.TodoResponseTest.testFrom.executor": "Run",
+    "JUnit.TodoServiceTest.executor": "Run",
     "JUnit.TodoTest.testDefaultConstructor.executor": "Run",
     "JUnit.TodoTest.testFullConstructor.executor": "Run",
     "JUnit.TodoTest.testIdTitleDoneConstructor.executor": "Run",
     "JUnit.TodoTest.testSettersAndGetters.executor": "Run",
     "JUnit.TodoTest.testTitleDescriptionConstructor.executor": "Run",
+    "JUnit.TomlEnvironmentPostProcessorTest.executor": "Run",
     "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -96,27 +98,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.todo.config" />
+      <recent name="com.example.todo.usecase" />
       <recent name="com.example.todo.dto" />
       <recent name="com.example.todo.domain" />
       <recent name="com.example.todo.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TodoServiceTest">
-    <configuration name="TodoControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-openapi-spring3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todo.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.controller.TodoControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TomlEnvironmentPostProcessorTest.testFileNotExists">
     <configuration name="TodoRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
@@ -162,17 +151,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoTest.testSettersAndGetters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TomlEnvironmentPostProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo-openapi-spring3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.todo.domain.*" />
+          <option name="PATTERN" value="com.example.todo.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.todo.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todo.domain.TodoTest" />
-      <option name="METHOD_NAME" value="testSettersAndGetters" />
+      <option name="PACKAGE_NAME" value="com.example.todo.config" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.config.TomlEnvironmentPostProcessorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TomlEnvironmentPostProcessorTest.testFileNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.config" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.config.TomlEnvironmentPostProcessorTest" />
+      <option name="METHOD_NAME" value="testFileNotExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.testFileNotExists" />
+        <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest" />
         <item itemvalue="JUnit.TodoServiceTest" />
         <item itemvalue="JUnit.TodoResponseTest" />
         <item itemvalue="JUnit.TodoRequestTest" />
-        <item itemvalue="JUnit.TodoControllerTest" />
-        <item itemvalue="JUnit.TodoTest.testSettersAndGetters" />
       </list>
     </recent_temporary>
   </component>
@@ -261,7 +265,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765586335643</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: criando os teste da classe de dto response Todo e dto Request Todo">
+      <option name="closed" value="true" />
+      <created>1765586658269</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765586658269</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: criando os teste da classe de services">
+      <option name="closed" value="true" />
+      <created>1765586741286</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765586741286</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,7 +304,9 @@
     <MESSAGE value="feat: organizando a estrutura dos testes de dominio" />
     <MESSAGE value="fix: consertando workspace.xml" />
     <MESSAGE value="feat: criando os teste da classe de controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: criando os teste da classe de controller" />
+    <MESSAGE value="feat: criando os teste da classe de dto response Todo e dto Request Todo" />
+    <MESSAGE value="feat: criando os teste da classe de services" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: criando os teste da classe de services" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

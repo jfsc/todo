@@ -12,7 +12,7 @@ import org.springframework.core.io.Resource;
 import java.io.InputStream;
 import java.util.Map;
 
-public class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
+public abstract class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
 
     private static final String NAME = "tomlPropertySource";
 
@@ -38,4 +38,6 @@ public class TomlEnvironmentPostProcessor implements EnvironmentPostProcessor {
             System.err.println("Failed to load TOML config: " + e.getMessage());
         }
     }
+
+    protected abstract Resource getResource();
 }
