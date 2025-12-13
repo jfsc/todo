@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="" />
+    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/finalCheck.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,33 +49,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.TodoApplication.executor": "Run",
-    "Maven. [clean,package].executor": "Run",
-    "Maven.todo-openapi-spring3 [-q,-Dtest=*Test...].executor": "Run",
-    "Maven.todo-openapi-spring3 [clean,install].executor": "Run",
-    "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
-    "Maven.todo-openapi-spring3 [clean,test].executor": "Run",
-    "Maven.todo-openapi-spring3 [spring-boot:run].executor": "Run",
-    "Maven.todo-openapi-spring3 [test...].executor": "Run",
-    "Maven.todo-openapi-spring3 [test].executor": "Run",
-    "Maven.todo-openapi-spring3 [teste].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature__bruna__v2",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Documents/.git/todo",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.TodoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.todo-openapi-spring3 [-q,-Dtest=*Test...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.todo-openapi-spring3 [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.todo-openapi-spring3 [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.todo-openapi-spring3 [clean,test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.todo-openapi-spring3 [spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.todo-openapi-spring3 [test...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.todo-openapi-spring3 [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.todo-openapi-spring3 [teste].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature__bruna__v2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Documents/.git/todo&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -84,13 +88,13 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn teste" />
-      <command value="mvn spring-boot:run" />
       <command value="mvn -q -Dtest=*Test test" />
       <command value="mvn test" />
       <command value="mvn clean install" />
       <command value="mvn test -Dtest=TodoControllerTest#testList" />
       <command value="mvn clean test" />
       <command value="mvn clean package" />
+      <command value="mvn spring-boot:run" />
     </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
