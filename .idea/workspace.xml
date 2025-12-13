@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/finalCheck.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +71,7 @@
     "Maven.todo-openapi-spring3 [clean].executor": "Run",
     "Maven.todo-openapi-spring3 [package].executor": "Run",
     "Maven.todo-openapi-spring3 [site].executor": "Run",
+    "Maven.todo-openapi-spring3 [spring-boot:run].executor": "Run",
     "Maven.todo-openapi-spring3 [test].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -102,6 +104,7 @@
       <command value="mvn test" />
       <command value="mvn clean install" />
       <command value="mvn clean package" />
+      <command value="mvn spring-boot:run" />
     </option>
   </component>
   <component name="RunManager" selected="JUnit.Testing all Test">
@@ -208,7 +211,6 @@
       <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.shouldLoadTomlConfigWhenFileExists" />
       <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest" />
       <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.postProcessEnvironment_shouldLoadTomlProperties" />
-      <item itemvalue="Spring Boot.TodoApplication" />
     </list>
     <recent_temporary>
       <list>
