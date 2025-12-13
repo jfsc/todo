@@ -41,20 +41,27 @@ class InMemoryTodoRepositoryTest {
         List<Todo> todoList = repository.findAll();
         assertNotNull(todoList);
         assertEquals(2, todoList.size());
+        assertTrue(todoList.stream().anyMatch(t -> t.getTitle().equals("Test 1")));
+        assertTrue(todoList.stream().anyMatch(t -> t.getTitle().equals("Test 2")));
     }
 
 
     @Test
-    void shouldUpdateTodo() {
+    void shouldUpdateTodo() throws InterruptedException{
         Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
         repository.save(todo);
 
         todo.setTitle("Updated Test");
+
+        Instant oldUpdatedAt = todo.getUpdatedAt();
+        Thread.sleep(10);
+
         repository.save(todo);
 
         Optional<Todo> found = repository.findById(todo.getId());
         assertTrue(found.isPresent());
         assertEquals("Updated Test", found.get().getTitle());
+        assertTrue(found.get().getUpdatedAt().isAfter(oldUpdatedAt));
     }
 
     @Test
@@ -80,5 +87,14 @@ class InMemoryTodoRepositoryTest {
         found = repository.findById(todo.getId());
         assertFalse(found.isPresent());
 
+    }
+
+    @Test
+    void shouldCreateTodoWithFullConstructor() {
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
+
+        assertEquals("Test", todo.getTitle());
+        assertEquals("teste de criacao", todo.getDescription());
+        assertFalse(todo.isDone());
     }
 }
