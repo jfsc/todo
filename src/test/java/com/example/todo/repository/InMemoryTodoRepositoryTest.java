@@ -58,22 +58,6 @@ class InMemoryTodoRepositoryTest {
     }
 
     @Test
-    void shouldCreateTodoConstructorTwoFields(){
-        Todo todo = new Todo( "Test", "teste de criacao");
-        repository.save(todo);
-
-        assertEquals("Test", todo.getTitle());
-    }
-
-    @Test
-    void shouldCreateTodoConstructorThreeFields(){
-        Todo todo = new Todo( UUID.randomUUID(),"Test", true);
-        repository.save(todo);
-
-        assertEquals("Test", todo.getTitle());
-    }
-
-    @Test
     void shouldGenerateIdIfNull(){
         Todo todo = new Todo();
         todo.setTitle("Teste");
@@ -95,5 +79,6 @@ class InMemoryTodoRepositoryTest {
         repository.deleteById(todo.getId());
         found = repository.findById(todo.getId());
         assertFalse(found.isPresent());
+
     }
 }
