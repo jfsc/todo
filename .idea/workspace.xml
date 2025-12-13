@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%.">
+      <change afterPath="$PROJECT_DIR$/finalCheck.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/controller/TodoControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/usecase/TodoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +84,7 @@
     "JUnit.TodoServiceTest.testUpdateNotFound.executor": "Run",
     "JUnit.TodoServiceTest.testUpdateSuccess.executor": "Run",
     "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
+    "Maven.todo-openapi-spring3 [spring-boot:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -105,6 +106,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean package" />
+      <command value="mvn spring-boot:run" />
     </option>
   </component>
   <component name="RunManager" selected="JUnit.TodoServiceTest.testDelete_NotFound">
@@ -294,5 +296,13 @@
     <MESSAGE value="Corrigido 1° bugem no @PathVariable(&quot;id&quot;) e o 2° bug que foi no medo de DELETE tanto no CONTROLLER como no SERVICE , como também foi corrigido a cobertura dos testes para 94%." />
     <MESSAGE value="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%." />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed the first bug in @PathVariable(&quot;id&quot;) and the second bug which was related to the DELETE error in both the CONTROLLER and the SERVICE, as well as correcting the test coverage to 94%." />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>
