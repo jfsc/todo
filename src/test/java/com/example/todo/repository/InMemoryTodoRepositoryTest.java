@@ -4,6 +4,7 @@ import com.example.todo.domain.Todo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -29,18 +30,71 @@ class InMemoryTodoRepositoryTest {
         assertEquals("Test", found.get().getTitle());
     }
 
+    @Test
+    void shouldListTodos() {
+        Todo todo1 = new Todo(UUID.randomUUID(), "Test 1", "teste de criacao 1", false);
+        Todo todo2 = new Todo(UUID.randomUUID(), "Test 2", "teste de criacao 2", false);
 
-//    @Test
-//    void shouldListTodos() {
-//
-//
-//    @Test
-//    void shouldUpdateTodo() {
-//
-//    }
-//
-//    @Test
-//    void shouldDeleteTodo() {
-//
-//    }
+        repository.save(todo1);
+        repository.save(todo2);
+
+        List<Todo> todoList = repository.findAll();
+        assertNotNull(todoList);
+        assertEquals(2, todoList.size());
+        assertTrue(todoList.stream().anyMatch(t -> t.getTitle().equals("Test 1")));
+        assertTrue(todoList.stream().anyMatch(t -> t.getTitle().equals("Test 2")));
+    }
+
+
+    @Test
+    void shouldUpdateTodo() throws InterruptedException{
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
+        repository.save(todo);
+
+        todo.setTitle("Updated Test");
+
+        Instant oldUpdatedAt = todo.getUpdatedAt();
+        Thread.sleep(10);
+
+        repository.save(todo);
+
+        Optional<Todo> found = repository.findById(todo.getId());
+        assertTrue(found.isPresent());
+        assertEquals("Updated Test", found.get().getTitle());
+        assertTrue(found.get().getUpdatedAt().isAfter(oldUpdatedAt));
+    }
+
+    @Test
+    void shouldGenerateIdIfNull(){
+        Todo todo = new Todo();
+        todo.setTitle("Teste");
+        todo.setDescription("Teste de descricao");
+        todo.setCreatedAt(Instant.now());
+
+        Todo savedTodo = repository.save(todo);
+        assertNotNull(savedTodo.getId());
+    }
+
+    @Test
+    void shouldDeleteTodo() {
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
+        repository.save(todo);
+
+        Optional<Todo> found = repository.findById(todo.getId());
+        assertTrue(found.isPresent());
+
+        repository.deleteById(todo.getId());
+        found = repository.findById(todo.getId());
+        assertFalse(found.isPresent());
+
+    }
+
+    @Test
+    void shouldCreateTodoWithFullConstructor() {
+        Todo todo = new Todo(UUID.randomUUID(), "Test", "teste de criacao", false);
+
+        assertEquals("Test", todo.getTitle());
+        assertEquals("teste de criacao", todo.getDescription());
+        assertFalse(todo.isDone());
+    }
 }

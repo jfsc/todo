@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="">
+    <list default="true" id="0da4a8f1-9a93-40cd-a883-e693f269c10a" name="Changes" comment="feat: criando os teste da classe de configurações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/todo/repository/InMemoryTodoRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -30,13 +37,16 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/jfsc/todo.git&quot;,
-    &quot;accountId&quot;: &quot;66e7dbe4-0524-4766-b176-4d59ed4ab6bc&quot;
+    &quot;accountId&quot;: &quot;e8599c3d-bf4e-4fcc-bdca-d733bcde0cb0&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="36fwFCc9SFMhOEFBX2wVx8w5rec" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,18 +55,148 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.TodoApplication.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldConstructor.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldCreateTodoConstructorThreeFields.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldCreateTodoWithFullConstructor.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldDeleteTodo.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldGenerateIdIfNull.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldGenerateIdWhenSavingTodoWithoutId.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldListTodos.executor": "Run",
+    "JUnit.InMemoryTodoRepositoryTest.shouldUpdateTodo.executor": "Run",
+    "JUnit.TodoControllerTest.executor": "Run",
+    "JUnit.TodoRequestTest.executor": "Run",
+    "JUnit.TodoResponseTest.executor": "Run",
+    "JUnit.TodoResponseTest.testFrom.executor": "Run",
+    "JUnit.TodoServiceTest.executor": "Run",
+    "JUnit.TodoTest.testDefaultConstructor.executor": "Run",
+    "JUnit.TodoTest.testFullConstructor.executor": "Run",
+    "JUnit.TodoTest.testIdTitleDoneConstructor.executor": "Run",
+    "JUnit.TodoTest.testSettersAndGetters.executor": "Run",
+    "JUnit.TodoTest.testTitleDescriptionConstructor.executor": "Run",
+    "JUnit.TomlEnvironmentPostProcessorTest.executor": "Run",
+    "JUnit.TomlEnvironmentPostProcessorTest.testFileNotExists.executor": "Run",
+    "Maven.todo-openapi-spring3 [clean,package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature__vinicius",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "feature__giordanni",
     "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Vinicius Leal/Documents/FACULDADE/ACCENTURE - 2025/3º FASE/projeto_10_12/todo",
+    "last_opened_file_path": "/home/giordanni/Documentos/JAVA/Accenture/Aula_Fish/pom.xml",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.todo.config" />
+      <recent name="com.example.todo.usecase" />
+      <recent name="com.example.todo.dto" />
+      <recent name="com.example.todo.domain" />
+      <recent name="com.example.todo.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.InMemoryTodoRepositoryTest.shouldCreateTodoWithFullConstructor">
+    <configuration name="InMemoryTodoRepositoryTest.shouldCreateTodoWithFullConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldCreateTodoWithFullConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryTodoRepositoryTest.shouldDeleteTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldDeleteTodo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryTodoRepositoryTest.shouldListTodos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldListTodos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryTodoRepositoryTest.shouldUpdateTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.repository.InMemoryTodoRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldUpdateTodo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TomlEnvironmentPostProcessorTest.testFileNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-openapi-spring3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.todo.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.todo.config" />
+      <option name="MAIN_CLASS_NAME" value="com.example.todo.config.TomlEnvironmentPostProcessorTest" />
+      <option name="METHOD_NAME" value="testFileNotExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldCreateTodoWithFullConstructor" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldDeleteTodo" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldUpdateTodo" />
+        <item itemvalue="JUnit.InMemoryTodoRepositoryTest.shouldListTodos" />
+        <item itemvalue="JUnit.TomlEnvironmentPostProcessorTest.testFileNotExists" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,6 +206,95 @@
       <option name="presentableId" value="Default" />
       <updated>1765410829477</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: creating tests repository">
+      <option name="closed" value="true" />
+      <created>1765483245563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765483245563</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: creating test from domain Todo">
+      <option name="closed" value="true" />
+      <created>1765484589192</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765484589193</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: Consertando bug ao tentar ler um id no path varieble. passando o id no pathvarieble da forma correta">
+      <option name="closed" value="true" />
+      <created>1765584605591</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765584605592</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: consertando segundo bug, que retornava o status code mesmo quando não encontrava nenhuma tarefa">
+      <option name="closed" value="true" />
+      <created>1765585004887</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765585004887</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: criando teste de unidade para a classe de dominio do todo">
+      <option name="closed" value="true" />
+      <created>1765585839279</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765585839279</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: organizando a estrutura dos testes de dominio">
+      <option name="closed" value="true" />
+      <created>1765585892307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765585892307</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: consertando workspace.xml">
+      <option name="closed" value="true" />
+      <created>1765585935414</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765585935414</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: criando os teste da classe de controller">
+      <option name="closed" value="true" />
+      <created>1765586335643</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765586335643</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: criando os teste da classe de dto response Todo e dto Request Todo">
+      <option name="closed" value="true" />
+      <created>1765586658269</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765586658269</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: criando os teste da classe de services">
+      <option name="closed" value="true" />
+      <created>1765586741286</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765586741286</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: criando os teste da classe de configurações">
+      <option name="closed" value="true" />
+      <created>1765587086062</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765587086062</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,5 +307,27 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: creating tests repository" />
+    <MESSAGE value="feat: creating test from domain Todo" />
+    <MESSAGE value="fix: Consertando bug ao tentar ler um id no path varieble. passando o id no pathvarieble da forma correta" />
+    <MESSAGE value="fix: consertando segundo bug, que retornava o status code mesmo quando não encontrava nenhuma tarefa" />
+    <MESSAGE value="feat: criando teste de unidade para a classe de dominio do todo" />
+    <MESSAGE value="feat: organizando a estrutura dos testes de dominio" />
+    <MESSAGE value="fix: consertando workspace.xml" />
+    <MESSAGE value="feat: criando os teste da classe de controller" />
+    <MESSAGE value="feat: criando os teste da classe de dto response Todo e dto Request Todo" />
+    <MESSAGE value="feat: criando os teste da classe de services" />
+    <MESSAGE value="feat: criando os teste da classe de configurações" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: criando os teste da classe de configurações" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>
